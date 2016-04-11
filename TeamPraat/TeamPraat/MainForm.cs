@@ -4,22 +4,36 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TeamPraat.Ui_Elements;
 
 namespace TeamPraat
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        private int defaultHeight;
+        private int Servers = 0;
+
+        public MainForm()
         {
             InitializeComponent();
+            defaultHeight = pbEmpty.Location.Y;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Je bent de moeder!");
+            pbEmpty.Location = new Point(pbEmpty.Location.X, pbEmpty.Location.Y + pbEmpty.Height + 10);
+
+            ConnectedServer cs = new ConnectedServer();
+            cs.Location = new Point(pbEmpty.Location.X, (defaultHeight + cs.Height) * Servers + 10);
+            Servers++;
+
+            panel1.Controls.Add(cs);
+
+            //MessageBox.Show("Je bent de moeder!");
         }
 
         private void button1_Click(object sender, EventArgs e)
