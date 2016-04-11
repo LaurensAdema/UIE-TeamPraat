@@ -16,5 +16,28 @@ namespace TeamPraat
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Je bent de moeder!");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (splitContainer1.Panel2.Visible)
+            {
+                splitContainer1.Panel2.Hide();
+            }
+            else
+            {
+                splitContainer1.Panel2.Show();
+            }
+        }
     }
 }
