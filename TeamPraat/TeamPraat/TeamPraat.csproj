@@ -77,6 +77,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Ui Elements\ConnectedServer.resx">
       <DependentUpon>ConnectedServer.cs</DependentUpon>
@@ -99,6 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\EmptyServer.png" />
+    <Content Include="Ui Elements\ic_mic_black_24dp_2x.png" />
+    <Content Include="Ui Elements\ic_settings_black_24dp_2x.png" />
+    <Content Include="Ui Elements\ic_volume_up_black_24dp_2x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

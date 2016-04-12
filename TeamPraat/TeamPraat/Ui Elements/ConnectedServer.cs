@@ -20,6 +20,13 @@ namespace TeamPraat.Ui_Elements
         private void pb_ServerIcon_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Klick");
+            this.BorderStyle = BorderStyle.None;
+            
+        }
+        private void UserControl1_Paint(object sender, PaintEventArgs e)
+        {
+           ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+            
         }
     }
 }

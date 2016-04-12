@@ -41,6 +41,7 @@
             this.btn_Dropdown.TabIndex = 0;
             this.btn_Dropdown.Text = "button1";
             this.btn_Dropdown.UseVisualStyleBackColor = true;
+            this.btn_Dropdown.Click += new System.EventHandler(this.btn_Dropdown_Click);
             // 
             // lbl_Server
             // 

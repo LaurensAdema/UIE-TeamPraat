@@ -16,11 +16,13 @@ namespace TeamPraat
     {
         private int defaultHeight;
         private int Servers = 0;
-
+        bool MicMuted,SpeakerMuted = false;
+        
         public MainForm()
         {
             InitializeComponent();
             defaultHeight = pbEmpty.Location.Y;
+          
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -33,7 +35,6 @@ namespace TeamPraat
 
             panel1.Controls.Add(cs);
 
-            //MessageBox.Show("Je bent de moeder!");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,6 +52,36 @@ namespace TeamPraat
             else
             {
                 splitContainer1.Panel2.Show();
+            }
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            if (!SpeakerMuted)
+            {
+
+                pictureBox1.BackColor = Color.Red;
+                SpeakerMuted = true;
+            }
+            else
+            {
+                pictureBox1.BackColor = Color.FromArgb(75, 75, 75);
+                SpeakerMuted = false;
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if(!MicMuted)
+            {
+
+                pictureBox3.BackColor = Color.Red;
+                MicMuted = true;
+            }
+            else
+            {
+                pictureBox3.BackColor = Color.FromArgb(75, 75, 75);
+                MicMuted = false;
             }
         }
     }
