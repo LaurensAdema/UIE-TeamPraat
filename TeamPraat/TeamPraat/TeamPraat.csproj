@@ -94,6 +94,9 @@
     <EmbeddedResource Include="Ui Elements\Server.resx">
       <DependentUpon>Server.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\MainForm.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\SettingsForm.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -109,8 +112,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\EmptyServer.png" />
+    <None Include="Ui Elements\ic_control_point_black_24dp_2x.png" />
     <Content Include="Ui Elements\ic_keyboard_arrow_down_black_24dp_2x.png" />
     <Content Include="Ui Elements\ic_keyboard_arrow_left_black_24dp_2x.png" />
+    <None Include="Ui Elements\ic_keyboard_arrow_right_black_24dp_2x.png" />
     <Content Include="Ui Elements\ic_keyboard_arrow_up_black_24dp_2x.png" />
     <Content Include="Ui Elements\ic_mic_black_24dp_2x.png" />
     <Content Include="Ui Elements\ic_settings_black_24dp_2x.png" />
