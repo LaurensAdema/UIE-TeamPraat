@@ -31,33 +31,38 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbEmpty = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmpty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,6 +77,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(126, 682);
             this.panel1.TabIndex = 0;
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(3, 589);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(104, 45);
+            this.trackBar1.TabIndex = 3;
             // 
             // panel2
             // 
@@ -98,14 +110,18 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.pictureBox4);
             this.splitContainer1.Panel1.Controls.Add(this.panel3);
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.label3);
+            this.splitContainer1.Panel2.Controls.Add(this.listBox2);
+            this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Panel2.Controls.Add(this.listBox1);
             this.splitContainer1.Panel2.Controls.Add(this.button3);
             this.splitContainer1.Size = new System.Drawing.Size(1120, 596);
-            this.splitContainer1.SplitterDistance = 855;
+            this.splitContainer1.SplitterDistance = 944;
             this.splitContainer1.TabIndex = 3;
             // 
             // panel3
@@ -117,24 +133,18 @@
             this.panel3.Size = new System.Drawing.Size(665, 488);
             this.panel3.TabIndex = 1;
             // 
-            // button1
+            // textBox1
             // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(15, 18);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "button1";
-            this.button3.UseVisualStyleBackColor = true;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Gill Sans MT", 8.25F);
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(516, 90);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(115, 20);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "Search";
+            this.textBox1.Visible = false;
             // 
             // label1
             // 
@@ -149,18 +159,26 @@
             this.label1.Text = "Server Browser";
             this.label1.Visible = false;
             // 
-            // textBox1
+            // button3
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Gill Sans MT", 8.25F);
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(516, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(115, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Search";
-            this.textBox1.Visible = false;
+            this.button3.Location = new System.Drawing.Point(15, 18);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "button1";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_left_black_24dp_2x;
+            this.pictureBox4.Location = new System.Drawing.Point(816, 280);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(39, 37);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // pictureBox3
             // 
@@ -208,12 +226,114 @@
             this.pbEmpty.TabStop = false;
             this.pbEmpty.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // trackBar1
+            // listBox1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(3, 589);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(104, 45);
-            this.trackBar1.TabIndex = 3;
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Font = new System.Drawing.Font("Gill Sans MT", 8.25F);
+            this.listBox1.ForeColor = System.Drawing.Color.White;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Items.AddRange(new object[] {
+            "Karel",
+            "Piet ",
+            "Henk",
+            "Jantje",
+            "Pietertje",
+            "Tjidde",
+            "Laurens"});
+            this.listBox1.Location = new System.Drawing.Point(15, 108);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(97, 112);
+            this.listBox1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 8.25F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(15, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Online";
+            // 
+            // listBox2
+            // 
+            this.listBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox2.Font = new System.Drawing.Font("Gill Sans MT", 8.25F);
+            this.listBox2.ForeColor = System.Drawing.Color.White;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 16;
+            this.listBox2.Items.AddRange(new object[] {
+            "Michel",
+            "Synclair",
+            "Vikki  ",
+            "Rudolph  ",
+            "Emerson  ",
+            "Loan  ",
+            "Janina  ",
+            "Daine  ",
+            "Randa  ",
+            "Rosalind  ",
+            "Reanna  ",
+            "Daniella  ",
+            "Leigh  ",
+            "Asia  ",
+            "Eric  ",
+            "Noelle  ",
+            "Kellee  ",
+            "Coralee  ",
+            "Minda  ",
+            "Taylor  ",
+            "Sheree  ",
+            "Spencer  ",
+            "Neva  ",
+            "Elin  ",
+            "Giselle  ",
+            "Leatha  ",
+            "Kimberlee  ",
+            "Teodoro  ",
+            "May  ",
+            "Johanna  ",
+            "Irving  ",
+            "Joi  ",
+            "Harlan  ",
+            "Tamra  ",
+            "Hildred  ",
+            "Williemae  ",
+            "Margareta  ",
+            "Melia  ",
+            "Sarina  ",
+            "Meridith  ",
+            "Tyisha  ",
+            "Arcelia  ",
+            "Bonnie  ",
+            "Wilfred  ",
+            "Willetta  ",
+            "Blaine  ",
+            "Monica  ",
+            "Josef  ",
+            "Fay  ",
+            "Mendy  ",
+            "Delmer  ",
+            "Mose  "});
+            this.listBox2.Location = new System.Drawing.Point(15, 280);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(97, 304);
+            this.listBox2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 8.25F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(15, 248);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Offline";
             // 
             // MainForm
             // 
@@ -229,19 +349,21 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmpty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -254,7 +376,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox1;
@@ -263,6 +384,11 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

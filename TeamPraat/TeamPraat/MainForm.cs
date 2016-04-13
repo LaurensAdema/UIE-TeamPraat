@@ -34,13 +34,7 @@ namespace TeamPraat
             Servers++;
 
             panel1.Controls.Add(cs);
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            
+           
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -52,6 +46,7 @@ namespace TeamPraat
             else
             {
                 splitContainer1.Panel2.Show();
+                
             }
         }
 
@@ -68,6 +63,11 @@ namespace TeamPraat
                 pictureBox1.BackColor = Color.FromArgb(75, 75, 75);
                 SpeakerMuted = false;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
