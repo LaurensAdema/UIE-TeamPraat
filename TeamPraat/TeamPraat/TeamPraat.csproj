@@ -72,6 +72,12 @@
     <Compile Include="Ui Elements\Server.Designer.cs">
       <DependentUpon>Server.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ui Elements\ServerBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui Elements\ServerBrowser.Designer.cs">
+      <DependentUpon>ServerBrowser.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ui Elements\Server.resx">
       <DependentUpon>Server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui Elements\ServerBrowser.resx">
+      <DependentUpon>ServerBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\MainForm.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />

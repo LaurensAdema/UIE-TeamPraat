@@ -12,8 +12,11 @@ namespace TeamPraat.Ui_Elements
 {
     public partial class Server : UserControl
     {
-        public Server()
+        private MainForm main;
+
+        public Server(MainForm main)
         {
+            this.main = main;
             InitializeComponent();
         }
 

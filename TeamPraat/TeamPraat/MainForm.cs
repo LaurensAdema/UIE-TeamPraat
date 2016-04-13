@@ -8,12 +8,12 @@ namespace TeamPraat
 {
     public partial class MainForm : Form
     {
-        private readonly int defaultHeight;
-        private readonly int initialSplitterDistance;
-        private bool MicMuted;
-        private bool SpeakerMuted;
-        private int Servers;
-        private Point originalpos;
+        public readonly int defaultHeight;
+        public readonly int initialSplitterDistance;
+        public bool MicMuted;
+        public bool SpeakerMuted;
+        public int Servers;
+        public Point originalpos;
 
         public MainForm()
         {
@@ -30,13 +30,8 @@ namespace TeamPraat
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            pbEmpty.Location = new Point(pbEmpty.Location.X, pbEmpty.Location.Y + pbEmpty.Height + 10);
-
-            var cs = new ConnectedServer();
-            cs.Location = new Point(pbEmpty.Location.X, (defaultHeight + cs.Height)*Servers + 10);
-            Servers++;
-
-            panel1.Controls.Add(cs);
+            splitContainer1.Panel1.Controls.Clear();
+            splitContainer1.Panel1.Controls.Add(new ServerBrowser(this));
         }
 
         private void button1_Click_1(object sender, EventArgs e)

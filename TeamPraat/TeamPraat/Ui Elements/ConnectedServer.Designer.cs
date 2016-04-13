@@ -39,7 +39,7 @@
             this.pb_ServerIcon.Size = new System.Drawing.Size(92, 92);
             this.pb_ServerIcon.TabIndex = 0;
             this.pb_ServerIcon.TabStop = false;
-            this.pb_ServerIcon.Click += new System.EventHandler(this.pb_ServerIcon_Click);
+            this.pb_ServerIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb_ServerIcon_MouseClick);
             // 
             // ConnectedServer
             // 
