@@ -39,7 +39,6 @@ namespace TeamPraat
             {
                 
                 originalpos = b.Location;
-                MessageBox.Show(Size.Width.ToString());
                 b.Location = new Point(Size.Width - b.Width - 10, b.Location.Y);
                 splitContainer1.Panel2.Hide();
             }

@@ -39,7 +39,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.plServerBrowser = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -60,8 +60,8 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.plServerBrowser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,7 +159,6 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.pictureBox4);
             this.splitContainer1.Panel1.Controls.Add(this.plServerBrowser);
             // 
             // splitContainer1.Panel2
@@ -172,17 +171,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(1120, 596);
             this.splitContainer1.SplitterDistance = 944;
             this.splitContainer1.TabIndex = 3;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_left_black_24dp_2x;
-            this.pictureBox4.Location = new System.Drawing.Point(918, 262);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(39, 37);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // plServerBrowser
             // 
@@ -338,12 +326,24 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_left_black_24dp_2x;
+            this.pictureBox4.Location = new System.Drawing.Point(1030, 248);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(39, 37);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1251, 681);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.splitContainer1);
@@ -363,9 +363,9 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.plServerBrowser.ResumeLayout(false);
             this.plServerBrowser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
