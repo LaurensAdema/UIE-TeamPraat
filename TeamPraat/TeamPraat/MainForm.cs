@@ -14,6 +14,7 @@ namespace TeamPraat
         public bool SpeakerMuted;
         public int Servers;
         public Point originalpos;
+        public ConnectedServer selectedServer = null;
 
         public MainForm()
         {

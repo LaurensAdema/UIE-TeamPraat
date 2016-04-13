@@ -28,34 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pb_ServerIcon = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_ServerIcon)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pb_ServerIcon
+            // pictureBox1
             // 
-            this.pb_ServerIcon.Location = new System.Drawing.Point(-1, -1);
-            this.pb_ServerIcon.Name = "pb_ServerIcon";
-            this.pb_ServerIcon.Size = new System.Drawing.Size(92, 92);
-            this.pb_ServerIcon.TabIndex = 0;
-            this.pb_ServerIcon.TabStop = false;
-            this.pb_ServerIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb_ServerIcon_MouseClick);
+            this.pictureBox1.Image = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_down_black_24dp_2x;
+            this.pictureBox1.InitialImage = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_down_black_24dp_2x;
+            this.pictureBox1.Location = new System.Drawing.Point(66, 64);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ConnectedServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.pb_ServerIcon);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "ConnectedServer";
             this.Size = new System.Drawing.Size(90, 90);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_ServerIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pb_ServerIcon;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -73,6 +73,16 @@ namespace TeamPraat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_keyboard_arrow_down_black_24dp_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_keyboard_arrow_down_black_24dp_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_keyboard_arrow_left_black_24dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_keyboard_arrow_left_black_24dp_2x", resourceCulture);
