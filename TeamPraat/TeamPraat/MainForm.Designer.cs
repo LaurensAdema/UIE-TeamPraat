@@ -172,7 +172,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_left_black_24dp_2x;
-            this.pictureBox4.Location = new System.Drawing.Point(816, 280);
+            this.pictureBox4.Location = new System.Drawing.Point(918, 262);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(39, 37);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -203,6 +203,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -244,7 +245,7 @@
             "Laurens"});
             this.listBox1.Location = new System.Drawing.Point(15, 108);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(97, 112);
+            this.listBox1.Size = new System.Drawing.Size(154, 112);
             this.listBox1.TabIndex = 1;
             // 
             // label2
@@ -321,7 +322,7 @@
             "Mose  "});
             this.listBox2.Location = new System.Drawing.Point(15, 280);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(97, 304);
+            this.listBox2.Size = new System.Drawing.Size(157, 304);
             this.listBox2.TabIndex = 1;
             // 
             // label3
@@ -340,13 +341,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1251, 681);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "TeamPraat BV";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
