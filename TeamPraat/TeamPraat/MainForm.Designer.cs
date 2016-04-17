@@ -2,10 +2,6 @@
 {
     partial class MainForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        public System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -38,11 +34,11 @@
             this.pbEmpty = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.scMainScreen = new System.Windows.Forms.SplitContainer();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lblFriends = new System.Windows.Forms.Label();
+            this.lbFriends = new System.Windows.Forms.ListBox();
+            this.pbFriendsSlide = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -51,11 +47,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmpty)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scMainScreen)).BeginInit();
+            this.scMainScreen.Panel2.SuspendLayout();
+            this.scMainScreen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFriendsSlide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,20 +142,20 @@
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // splitContainer1
+            // scMainScreen
             // 
-            this.splitContainer1.IsSplitterFixed = true;
-            this.splitContainer1.Location = new System.Drawing.Point(124, 0);
-            this.splitContainer1.Name = "splitContainer1";
+            this.scMainScreen.IsSplitterFixed = true;
+            this.scMainScreen.Location = new System.Drawing.Point(124, 0);
+            this.scMainScreen.Name = "scMainScreen";
             // 
-            // splitContainer1.Panel2
+            // scMainScreen.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.pictureBox6);
-            this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Panel2.Controls.Add(this.listBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(1128, 682);
-            this.splitContainer1.SplitterDistance = 950;
-            this.splitContainer1.TabIndex = 3;
+            this.scMainScreen.Panel2.Controls.Add(this.pictureBox6);
+            this.scMainScreen.Panel2.Controls.Add(this.lblFriends);
+            this.scMainScreen.Panel2.Controls.Add(this.lbFriends);
+            this.scMainScreen.Size = new System.Drawing.Size(1128, 682);
+            this.scMainScreen.SplitterDistance = 950;
+            this.scMainScreen.TabIndex = 3;
             // 
             // pictureBox6
             // 
@@ -171,26 +167,26 @@
             this.pictureBox6.TabIndex = 4;
             this.pictureBox6.TabStop = false;
             // 
-            // label2
+            // lblFriends
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(19, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 29);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "My Friends";
+            this.lblFriends.AutoSize = true;
+            this.lblFriends.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFriends.ForeColor = System.Drawing.Color.White;
+            this.lblFriends.Location = new System.Drawing.Point(19, 16);
+            this.lblFriends.Name = "lblFriends";
+            this.lblFriends.Size = new System.Drawing.Size(142, 29);
+            this.lblFriends.TabIndex = 2;
+            this.lblFriends.Text = "My Friends";
             // 
-            // listBox1
+            // lbFriends
             // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.Font = new System.Drawing.Font("Gill Sans MT", 8.25F);
-            this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Items.AddRange(new object[] {
+            this.lbFriends.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.lbFriends.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbFriends.Font = new System.Drawing.Font("Gill Sans MT", 8.25F);
+            this.lbFriends.ForeColor = System.Drawing.Color.White;
+            this.lbFriends.FormattingEnabled = true;
+            this.lbFriends.ItemHeight = 16;
+            this.lbFriends.Items.AddRange(new object[] {
             "Online",
             " Karel",
             " Piet ",
@@ -252,23 +248,23 @@
             " Mendy  ",
             "Delmer  ",
             "Mose  "});
-            this.listBox1.Location = new System.Drawing.Point(3, 48);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox1.Size = new System.Drawing.Size(166, 592);
-            this.listBox1.TabIndex = 1;
+            this.lbFriends.Location = new System.Drawing.Point(3, 48);
+            this.lbFriends.Name = "lbFriends";
+            this.lbFriends.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.lbFriends.Size = new System.Drawing.Size(166, 592);
+            this.lbFriends.TabIndex = 1;
             // 
-            // pictureBox4
+            // pbFriendsSlide
             // 
-            this.pictureBox4.Image = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_right_black_24dp_2x;
-            this.pictureBox4.InitialImage = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_right_black_24dp_2x;
-            this.pictureBox4.Location = new System.Drawing.Point(1030, 340);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(39, 37);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.button1_Click_1);
+            this.pbFriendsSlide.Image = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_right_black_24dp_2x;
+            this.pbFriendsSlide.InitialImage = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_right_black_24dp_2x;
+            this.pbFriendsSlide.Location = new System.Drawing.Point(1030, 340);
+            this.pbFriendsSlide.Name = "pbFriendsSlide";
+            this.pbFriendsSlide.Size = new System.Drawing.Size(39, 37);
+            this.pbFriendsSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFriendsSlide.TabIndex = 2;
+            this.pbFriendsSlide.TabStop = false;
+            this.pbFriendsSlide.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // MainForm
             // 
@@ -276,10 +272,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1251, 681);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pbFriendsSlide);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.scMainScreen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MainForm";
             this.Text = "TeamPraat";
@@ -291,12 +287,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmpty)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.scMainScreen.Panel2.ResumeLayout(false);
+            this.scMainScreen.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scMainScreen)).EndInit();
+            this.scMainScreen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFriendsSlide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -309,15 +305,16 @@
         public System.Windows.Forms.BindingSource bindingSource1;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Button button2;
-        public System.Windows.Forms.SplitContainer splitContainer1;
+        public System.Windows.Forms.SplitContainer scMainScreen;
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.PictureBox pictureBox3;
         public System.Windows.Forms.TrackBar trackBar1;
-        public System.Windows.Forms.PictureBox pictureBox4;
-        public System.Windows.Forms.ListBox listBox1;
-        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.PictureBox pbFriendsSlide;
+        public System.Windows.Forms.ListBox lbFriends;
+        public System.Windows.Forms.Label lblFriends;
         public System.Windows.Forms.PictureBox pictureBox6;
+        private System.ComponentModel.IContainer components;
     }
 }
 

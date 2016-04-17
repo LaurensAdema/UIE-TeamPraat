@@ -22,7 +22,8 @@ namespace TeamPraat.Ui_Elements
         
         private void UserControl1_Paint(object sender, PaintEventArgs e)
         {
-           ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+           ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.Green, ButtonBorderStyle.Solid);
+           
             
         }
         private void pb_ServerIcon_MouseClick(object sender, MouseEventArgs e)
@@ -36,8 +37,8 @@ namespace TeamPraat.Ui_Elements
             }
             else
             {
-                main.splitContainer1.Panel1.Controls.Clear();
-                main.splitContainer1.Panel1.Controls.Add(new Server(main));
+                main.scMainScreen.Panel1.Controls.Clear();
+                main.scMainScreen.Panel1.Controls.Add(new Server(main));
             }
         }
     }

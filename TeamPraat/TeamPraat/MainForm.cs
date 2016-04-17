@@ -18,52 +18,52 @@ namespace TeamPraat
         public MainForm()
         {
             InitializeComponent();
-            initialSplitterDistance = splitContainer1.SplitterDistance;
-            originalpos = pictureBox4.Location;
-            splitContainer1.SplitterDistance = splitContainer1.Width;
-            pictureBox4.Location = new Point(Size.Width - pictureBox4.Width - 10, pictureBox4.Location.Y);
-            pictureBox4.Image = TeamPraat.Properties.Resources.ic_keyboard_arrow_left_black_24dp_2x;
-            splitContainer1.Panel2.Hide();
+            initialSplitterDistance = scMainScreen.SplitterDistance;
+            originalpos = pbFriendsSlide.Location;
+            scMainScreen.SplitterDistance = scMainScreen.Width;
+            pbFriendsSlide.Location = new Point(Size.Width - pbFriendsSlide.Width - 10, pbFriendsSlide.Location.Y);
+            pbFriendsSlide.Image = TeamPraat.Properties.Resources.ic_keyboard_arrow_left_black_24dp_2x;
+            scMainScreen.Panel2.Hide();
             defaultHeight = pbEmpty.Location.Y;
-            pictureBox4.BringToFront();
+            pbFriendsSlide.BringToFront();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            splitContainer1.Panel1.Controls.Clear();
-            splitContainer1.Panel1.Controls.Add(new ServerBrowser(this));
+            scMainScreen.Panel1.Controls.Clear();
+            scMainScreen.Panel1.Controls.Add(new ServerBrowser(this));
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             var b = (PictureBox)sender;
 
-            if (splitContainer1.Panel2.Visible)
+            if (scMainScreen.Panel2.Visible)
             {
                 originalpos = b.Location;
                 b.Location = new Point(Size.Width - b.Width - 10, b.Location.Y);
                 b.Image = TeamPraat.Properties.Resources.ic_keyboard_arrow_left_black_24dp_2x;
                 
-                for (int splitterDistance = initialSplitterDistance; splitterDistance <= splitContainer1.Width; splitterDistance += 1)
+                for (int splitterDistance = initialSplitterDistance; splitterDistance <= scMainScreen.Width; splitterDistance += 1)
                 {
                     DateTime start = DateTime.Now;
-                    splitContainer1.SplitterDistance = splitterDistance;
+                    scMainScreen.SplitterDistance = splitterDistance;
 
                     while (DateTime.Now.Subtract(start).TotalMilliseconds <= 0.5)
                     {
                         Application.DoEvents();
                     }
                 }
-                splitContainer1.Panel2.Hide();
+                scMainScreen.Panel2.Hide();
             }
             else
             {
-                splitContainer1.Panel2.Show();
+                scMainScreen.Panel2.Show();
                 b.Image = TeamPraat.Properties.Resources.ic_keyboard_arrow_right_black_24dp_2x;
-                for (int splitterDistance = splitContainer1.Width; splitterDistance >= initialSplitterDistance; splitterDistance -= 1)
+                for (int splitterDistance = scMainScreen.Width; splitterDistance >= initialSplitterDistance; splitterDistance -= 1)
                 {
                     DateTime start = DateTime.Now;
-                    splitContainer1.SplitterDistance = splitterDistance;
+                    scMainScreen.SplitterDistance = splitterDistance;
                     b.Location.Offset(1, 0);
 
                     while (DateTime.Now.Subtract(start).TotalMilliseconds <= 0.5)
