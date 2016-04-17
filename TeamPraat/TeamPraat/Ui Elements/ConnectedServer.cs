@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,7 +54,8 @@ namespace TeamPraat.Ui_Elements
                 this.Size = new Size(this.Width, initHeight);
                 main.pbEmpty.Location = new Point(main.pbEmpty.Location.X, main.pbEmpty.Location.Y - colapseSize);
                 main.selectedServer = null;
-                foreach (ConnectedServer cs in from Control c in main.Controls select c as ConnectedServer into cs where cs?.Location.Y > this.Location.Y select cs)
+
+                foreach (ConnectedServer cs in from Control c in main.panel1.Controls select c as ConnectedServer into cs where cs?.Location.Y > this.Location.Y select cs)
                 {
                     cs.Location = new Point(cs.Location.X, cs.Location.Y - colapseSize);
                 }
@@ -63,7 +65,7 @@ namespace TeamPraat.Ui_Elements
                 this.Size = new Size(this.Width, this.Height + colapseSize);
                 main.pbEmpty.Location = new Point(main.pbEmpty.Location.X, main.pbEmpty.Location.Y + colapseSize);
                 main.selectedServer = this;
-                foreach (ConnectedServer cs in from Control c in main.Controls select c as ConnectedServer into cs where cs?.Location.Y > this.Location.Y select cs)
+                foreach (ConnectedServer cs in from Control c in main.panel1.Controls select c as ConnectedServer into cs where cs?.Location.Y > this.Location.Y select cs)
                 {
                     cs.Location = new Point(cs.Location.X, cs.Location.Y + colapseSize);
                 }
