@@ -13,6 +13,7 @@ namespace TeamPraat.Ui_Elements
     public partial class ServerBrowser : UserControl
     {
         private MainForm main;
+        private int DefaultHeight = 12;
 
         public ServerBrowser(MainForm main)
         {
@@ -22,13 +23,13 @@ namespace TeamPraat.Ui_Elements
 
         private void btnAddServer_Click(object sender, EventArgs e)
         {
-            main.pbEmpty.Location = new Point(main.pbEmpty.Location.X, main.pbEmpty.Location.Y + main.pbEmpty.Height + 10);
+            main.pbEmpty.Location = new Point(main.pbEmpty.Location.X, main.pbEmpty.Location.Y + main.pbEmpty.Height + DefaultHeight);
 
             var cs = new ConnectedServer(main);
-            cs.Location = new Point(main.pbEmpty.Location.X, (main.defaultHeight + cs.Height) * main.Servers + 10);
+            cs.Location = new Point(main.pbEmpty.Location.X, (main.defaultHeight + cs.Height) * main.Servers + DefaultHeight);
             main.Servers++;
 
-            main.panel1.Controls.Add(cs);
+            main.plConnected.Controls.Add(cs);
         }
     }
 }

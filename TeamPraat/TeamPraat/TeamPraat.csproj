@@ -122,7 +122,9 @@
   <ItemGroup>
     <Content Include="Properties\EmptyServer.png" />
     <None Include="Ui Elements\ic_control_point_black_24dp_2x.png" />
-    <Content Include="Ui Elements\ic_keyboard_arrow_down_black_24dp_2x.png" />
+    <Content Include="Ui Elements\ic_keyboard_arrow_down_black_24dp_2x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Ui Elements\ic_keyboard_arrow_left_black_24dp_2x.png" />
     <None Include="Ui Elements\ic_keyboard_arrow_right_black_24dp_2x.png" />
     <Content Include="Ui Elements\ic_keyboard_arrow_up_black_24dp_2x.png" />

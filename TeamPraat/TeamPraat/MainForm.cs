@@ -80,12 +80,12 @@ namespace TeamPraat
         {
             if (!SpeakerMuted)
             {
-                pictureBox1.BackColor = Color.Red;
+                pbSound.BackColor = Color.Red;
                 SpeakerMuted = true;
             }
             else
             {
-                pictureBox1.BackColor = Color.FromArgb(75, 75, 75);
+                pbSound.BackColor = Color.FromArgb(75, 75, 75);
                 SpeakerMuted = false;
             }
         }
@@ -104,12 +104,12 @@ namespace TeamPraat
         {
             if (!MicMuted)
             {
-                pictureBox3.BackColor = Color.Red;
+                pbMic.BackColor = Color.Red;
                 MicMuted = true;
             }
             else
             {
-                pictureBox3.BackColor = Color.FromArgb(75, 75, 75);
+                pbMic.BackColor = Color.FromArgb(75, 75, 75);
                 MicMuted = false;
             }
         }

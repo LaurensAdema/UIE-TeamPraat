@@ -1,43 +1,55 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Linq;
 
 namespace TeamPraat.Ui_Elements
 {
     public partial class ConnectedServer : UserControl
     {
-        private MainForm main;
-        private readonly int initHeight;
         private readonly int colapseSize = 50;
+        private readonly int initHeight;
+        private readonly MainForm main;
 
         public ConnectedServer(MainForm main)
         {
             this.main = main;
             InitializeComponent();
-            initHeight = this.Height;
+            initHeight = Height;
+            foreach (var c in main.plConnected.Controls)
+            {
+                ConnectedServer cs = c as ConnectedServer;
+                if (cs != null)
+                {
+                    if (cs.Height != initHeight)
+                    {
+                        cs.Colaps();
+                    }
+                }
+            }
         }
-        
+
         private void UserControl1_Paint(object sender, PaintEventArgs e)
         {
-           ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.Green, ButtonBorderStyle.Solid);
-           
-            
+            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.Green, ButtonBorderStyle.Solid);
         }
+
         private void pb_ServerIcon_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
             {
                 MessageBox.Show("Disconnected");
-                main.pbEmpty.Location = new Point(main.pbEmpty.Location.X, main.pbEmpty.Location.Y - main.pbEmpty.Height - 10);
+                main.pbEmpty.Location = new Point(main.pbEmpty.Location.X,
+                    main.pbEmpty.Location.Y - main.pbEmpty.Height - 12);
                 main.Servers--;
+                foreach (ConnectedServer cs in from Control c in main.plConnected.Controls
+                    select c as ConnectedServer
+                    into cs
+                    where cs?.Location.Y > Location.Y
+                    select cs)
+                {
+                    cs.Location = new Point(cs.Location.X, cs.Location.Y - cs.Height - 12);
+                }
                 Dispose();
             }
             else
@@ -49,26 +61,44 @@ namespace TeamPraat.Ui_Elements
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if(main.selectedServer == this) //inklappen
+            if (main.selectedServer == this) //inklappen
             {
-                this.Size = new Size(this.Width, initHeight);
-                main.pbEmpty.Location = new Point(main.pbEmpty.Location.X, main.pbEmpty.Location.Y - colapseSize);
-                main.selectedServer = null;
-
-                foreach (ConnectedServer cs in from Control c in main.panel1.Controls select c as ConnectedServer into cs where cs?.Location.Y > this.Location.Y select cs)
-                {
-                    cs.Location = new Point(cs.Location.X, cs.Location.Y - colapseSize);
-                }
+                Colaps();
             }
-            else ///uitklappen
+            else //uitklappen
             {
-                this.Size = new Size(this.Width, this.Height + colapseSize);
-                main.pbEmpty.Location = new Point(main.pbEmpty.Location.X, main.pbEmpty.Location.Y + colapseSize);
-                main.selectedServer = this;
-                foreach (ConnectedServer cs in from Control c in main.panel1.Controls select c as ConnectedServer into cs where cs?.Location.Y > this.Location.Y select cs)
-                {
-                    cs.Location = new Point(cs.Location.X, cs.Location.Y + colapseSize);
-                }
+                Expand();
+            }
+        }
+
+        public void Colaps()
+        {
+            Size = new Size(Width, initHeight);
+            main.pbEmpty.Location = new Point(main.pbEmpty.Location.X, main.pbEmpty.Location.Y - colapseSize);
+            main.selectedServer = null;
+
+            foreach (ConnectedServer cs in from Control c in main.plConnected.Controls
+                                           select c as ConnectedServer
+                into cs
+                                           where cs?.Location.Y > Location.Y
+                                           select cs)
+            {
+                cs.Location = new Point(cs.Location.X, cs.Location.Y - colapseSize);
+            }
+        }
+
+        public void Expand()
+        {
+            Size = new Size(Width, Height + colapseSize);
+            main.pbEmpty.Location = new Point(main.pbEmpty.Location.X, main.pbEmpty.Location.Y + colapseSize);
+            main.selectedServer = this;
+            foreach (ConnectedServer cs in from Control c in main.plConnected.Controls
+                                           select c as ConnectedServer
+                into cs
+                                           where cs?.Location.Y > Location.Y
+                                           select cs)
+            {
+                cs.Location = new Point(cs.Location.X, cs.Location.Y + colapseSize);
             }
         }
     }

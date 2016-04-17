@@ -28,21 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbServerSettings = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbServerSettings)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pbServerSettings
             // 
-            this.pictureBox1.Image = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_down_black_24dp_2x;
-            this.pictureBox1.InitialImage = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_down_black_24dp_2x;
-            this.pictureBox1.Location = new System.Drawing.Point(66, 64);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 27);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbServerSettings.Image = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_down_black_24dp_2x1;
+            this.pbServerSettings.Location = new System.Drawing.Point(66, 64);
+            this.pbServerSettings.Name = "pbServerSettings";
+            this.pbServerSettings.Size = new System.Drawing.Size(25, 27);
+            this.pbServerSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbServerSettings.TabIndex = 1;
+            this.pbServerSettings.TabStop = false;
+            this.pbServerSettings.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ConnectedServer
             // 
@@ -50,15 +49,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbServerSettings);
             this.Name = "ConnectedServer";
             this.Size = new System.Drawing.Size(90, 90);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb_ServerIcon_MouseClick);
+            ((System.ComponentModel.ISupportInitialize)(this.pbServerSettings)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbServerSettings;
     }
 }
