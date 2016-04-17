@@ -70,6 +70,7 @@
             this.Controls.Add(this.btn_Dropdown);
             this.Name = "Server";
             this.Size = new System.Drawing.Size(485, 52);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Server_MouseClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -24,5 +24,10 @@ namespace TeamPraat.Ui_Elements
         {
 
         }
+
+        private void Server_MouseClick(object sender, MouseEventArgs e)
+        {
+            //Connect
+        }
     }
 }

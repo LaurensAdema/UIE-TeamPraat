@@ -34,7 +34,7 @@
             // 
             // btnAddServer
             // 
-            this.btnAddServer.Location = new System.Drawing.Point(156, 213);
+            this.btnAddServer.Location = new System.Drawing.Point(323, 225);
             this.btnAddServer.Name = "btnAddServer";
             this.btnAddServer.Size = new System.Drawing.Size(75, 23);
             this.btnAddServer.TabIndex = 0;
