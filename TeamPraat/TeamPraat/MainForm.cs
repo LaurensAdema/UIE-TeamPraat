@@ -116,7 +116,7 @@ namespace TeamPraat
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Vriend toegevoedt");
+            MessageBox.Show("Vriend toegevoegd");
         }
     }
 }
