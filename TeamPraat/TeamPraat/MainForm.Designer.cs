@@ -159,7 +159,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::TeamPraat.Properties.Resources.ic_add_circle_white_24dp_2x;
+            this.pictureBox6.Image = global::TeamPraat.Properties.Resources.ic_person_add_white_24dp_2x;
             this.pictureBox6.Location = new System.Drawing.Point(127, 646);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(34, 33);
