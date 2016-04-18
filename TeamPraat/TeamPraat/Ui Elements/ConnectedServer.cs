@@ -35,7 +35,7 @@ namespace TeamPraat.Ui_Elements
                 {
                     if (cs.Height != initHeight)
                     {
-                        cs.Colaps();
+                        cs.Collapse();
                     }
                 }
             }
@@ -55,25 +55,7 @@ namespace TeamPraat.Ui_Elements
 
         private void pb_ServerIcon_MouseClick(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
-            {
-                MessageBox.Show("Disconnected");
-                mainServer.ConnecedPeople--;
-                mainServer.OpenServer = null;
-                main.pbEmpty.Location = new Point(main.pbEmpty.Location.X,
-                    main.pbEmpty.Location.Y - main.pbEmpty.Height - 12);
-                main.Servers--;
-                foreach (ConnectedServer cs in from Control c in main.plConnected.Controls
-                    select c as ConnectedServer
-                    into cs
-                    where cs?.Location.Y > Location.Y
-                    select cs)
-                {
-                    cs.Location = new Point(cs.Location.X, cs.Location.Y - cs.Height - 12);
-                }
-                Dispose();
-            }
-            else
+            if (e.Button == MouseButtons.Left)
             {
                 foreach (var c in main.plConnected.Controls)
                 {
@@ -109,7 +91,7 @@ namespace TeamPraat.Ui_Elements
         {
             if (main.selectedServer == this) //inklappen
             {
-                Colaps();
+                Collapse();
             }
             else //uitklappen
             {
@@ -118,7 +100,7 @@ namespace TeamPraat.Ui_Elements
             
         }
 
-        public void Colaps()
+        public void Collapse()
         {
             Size = new Size(Width, initHeight);
             main.pbEmpty.Location = new Point(main.pbEmpty.Location.X, main.pbEmpty.Location.Y - colapseSize);
@@ -133,6 +115,8 @@ namespace TeamPraat.Ui_Elements
                 cs.Location = new Point(cs.Location.X, cs.Location.Y - colapseSize);
                 cs.Refresh();
             }
+            pbServerSettings.Location = new Point(pbServerSettings.Location.X, pbServerSettings.Location.Y - colapseSize);
+            pbServerSettings.Image = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_down_black_24dp_2x1;
             Refresh();
         }
 
@@ -150,7 +134,28 @@ namespace TeamPraat.Ui_Elements
                 cs.Location = new Point(cs.Location.X, cs.Location.Y + colapseSize);
                 cs.Refresh();
             }
+            pbServerSettings.Location = new Point(pbServerSettings.Location.X, pbServerSettings.Location.Y + colapseSize);
+            pbServerSettings.Image = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_up_black_24dp_2x;
             Refresh();
+        }
+
+        private void pbDisconnect_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Disconnected");
+            mainServer.ConnecedPeople--;
+            mainServer.OpenServer = null;
+            main.pbEmpty.Location = new Point(main.pbEmpty.Location.X,
+                main.pbEmpty.Location.Y - main.pbEmpty.Height - 12);
+            main.Servers--;
+            foreach (ConnectedServer cs in from Control c in main.plConnected.Controls
+                                           select c as ConnectedServer
+                into cs
+                                           where cs?.Location.Y > Location.Y
+                                           select cs)
+            {
+                cs.Location = new Point(cs.Location.X, cs.Location.Y - cs.Height - 12);
+            }
+            Dispose();
         }
     }
 }
