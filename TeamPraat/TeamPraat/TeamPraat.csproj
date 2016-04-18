@@ -139,17 +139,41 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\EmptyServer.png" />
-    <None Include="Ui Elements\ic_control_point_black_24dp_2x.png" />
-    <None Include="Ui Elements\ic_clear_black_24dp_2x.png" />
+    <None Include="Ui Elements\ic_control_point_black_24dp_2x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Ui Elements\ic_clear_black_24dp_2x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\ic_keyboard_arrow_left_white_24dp_2x.png" />
+    <None Include="Resources\ic_keyboard_arrow_right_white_24dp_2x.png" />
     <Content Include="Ui Elements\ic_keyboard_arrow_down_black_24dp_2x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Ui Elements\ic_keyboard_arrow_left_black_24dp_2x.png" />
-    <None Include="Ui Elements\ic_keyboard_arrow_right_black_24dp_2x.png" />
-    <Content Include="Ui Elements\ic_keyboard_arrow_up_black_24dp_2x.png" />
-    <Content Include="Ui Elements\ic_mic_black_24dp_2x.png" />
-    <Content Include="Ui Elements\ic_settings_black_24dp_2x.png" />
-    <Content Include="Ui Elements\ic_volume_up_black_24dp_2x.png" />
+    <Content Include="Ui Elements\ic_keyboard_arrow_left_black_24dp_2x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Ui Elements\ic_keyboard_arrow_right_black_24dp_2x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Ui Elements\ic_keyboard_arrow_left_white_24dp_2x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ui Elements\ic_keyboard_arrow_right_white_24dp_2x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ui Elements\ic_keyboard_arrow_up_black_24dp_2x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ui Elements\ic_mic_black_24dp_2x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ui Elements\ic_settings_black_24dp_2x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ui Elements\ic_volume_up_black_24dp_2x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

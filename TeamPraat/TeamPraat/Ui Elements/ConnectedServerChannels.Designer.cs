@@ -38,7 +38,9 @@
             // lbl_Channels
             // 
             this.lbl_Channels.AutoSize = true;
+            this.lbl_Channels.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Channels.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Channels.ForeColor = System.Drawing.Color.White;
             this.lbl_Channels.Location = new System.Drawing.Point(3, 34);
             this.lbl_Channels.Name = "lbl_Channels";
             this.lbl_Channels.Size = new System.Drawing.Size(163, 39);

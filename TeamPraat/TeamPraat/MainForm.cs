@@ -25,7 +25,7 @@ namespace TeamPraat
             originalpos = pbFriendsSlide.Location;
             scMainScreen.SplitterDistance = scMainScreen.Width;
             pbFriendsSlide.Location = new Point(Size.Width - pbFriendsSlide.Width - 10, pbFriendsSlide.Location.Y);
-            pbFriendsSlide.Image = Resources.ic_keyboard_arrow_left_black_24dp_2x;
+            pbFriendsSlide.Image = Resources.ic_keyboard_arrow_left_white_24dp_2x;
             scMainScreen.Panel2.Hide();
             defaultHeight = pbEmpty.Location.Y;
             pbFriendsSlide.BringToFront();
@@ -59,7 +59,7 @@ namespace TeamPraat
             {
                 originalpos = b.Location;
                 b.Location = new Point(Size.Width - b.Width - 10, b.Location.Y);
-                b.Image = Resources.ic_keyboard_arrow_left_black_24dp_2x;
+                b.Image = Resources.ic_keyboard_arrow_left_white_24dp_2x;
 
                 for (int splitterDistance = initialSplitterDistance;
                     splitterDistance <= scMainScreen.Width;
@@ -78,7 +78,7 @@ namespace TeamPraat
             else
             {
                 scMainScreen.Panel2.Show();
-                b.Image = Resources.ic_keyboard_arrow_right_black_24dp_2x;
+                b.Image = Resources.ic_keyboard_arrow_right_white_24dp_2x;
                 for (int splitterDistance = scMainScreen.Width;
                     splitterDistance >= initialSplitterDistance;
                     splitterDistance -= 1)
