@@ -28,18 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lbl_ChannelName = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // lbl_ChannelName
+            // 
+            this.lbl_ChannelName.AutoSize = true;
+            this.lbl_ChannelName.Location = new System.Drawing.Point(16, 23);
+            this.lbl_ChannelName.Name = "lbl_ChannelName";
+            this.lbl_ChannelName.Size = new System.Drawing.Size(35, 13);
+            this.lbl_ChannelName.TabIndex = 0;
+            this.lbl_ChannelName.Text = "label1";
             // 
             // Channel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.lbl_ChannelName);
             this.Name = "Channel";
-            this.Size = new System.Drawing.Size(650, 104);
+            this.Size = new System.Drawing.Size(648, 58);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lbl_ChannelName;
     }
 }

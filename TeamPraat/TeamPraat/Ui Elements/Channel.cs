@@ -7,6 +7,7 @@ namespace TeamPraat.Ui_Elements
         public Channel()
         {
             InitializeComponent();
+            lbl_ChannelName.Text = "Channel " + Location.Y;
         }
     }
 }
