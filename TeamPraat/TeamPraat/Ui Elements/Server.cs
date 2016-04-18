@@ -1,17 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TeamPraat.Ui_Elements
 {
     public partial class Server : UserControl
     {
+        private readonly int DefaultHeight = 12;
+        private readonly MainForm main;
+        public ConnectedServer OpenServer;
+
+        private int people;
+
         [Description("The name of the server"), Category("Data")]
         public string ServerName
         {
@@ -25,13 +26,10 @@ namespace TeamPraat.Ui_Elements
             get { return people; }
             set
             {
-                people = value; lbl_People.Text = people + " / Infinite"; }
+                people = value;
+                lbl_People.Text = people + " / Infinite";
+            }
         }
-
-        private int people;
-        private int DefaultHeight = 12;
-        private MainForm main;
-        public ConnectedServer OpenServer;
 
         public Server(MainForm main)
         {
@@ -47,7 +45,6 @@ namespace TeamPraat.Ui_Elements
 
         private void btn_Dropdown_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Server_MouseClick(object sender, MouseEventArgs e)
@@ -60,12 +57,17 @@ namespace TeamPraat.Ui_Elements
 
                 ConnectedServer cs;
                 OpenServer = cs = new ConnectedServer(main, this);
+                cs.ServerName = ServerName;
                 cs.Location = new Point(main.pbEmpty.Location.X,
                     (main.defaultHeight + cs.Height)*main.Servers + DefaultHeight);
                 main.Servers++;
 
                 main.plConnected.Controls.Add(cs);
             }
+        }
+
+        private void pb_Settings_Click(object sender, EventArgs e)
+        {
         }
     }
 }

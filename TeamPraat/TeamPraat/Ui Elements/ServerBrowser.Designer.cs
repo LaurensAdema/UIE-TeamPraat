@@ -71,6 +71,7 @@
             // 
             this.Tjidde_Server.AccessibleDescription = "";
             this.Tjidde_Server.AccessibleName = "Tijdde Server";
+            this.Tjidde_Server.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Tjidde_Server.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Tjidde_Server.ConnecedPeople = 10;
             this.Tjidde_Server.Location = new System.Drawing.Point(32, 107);

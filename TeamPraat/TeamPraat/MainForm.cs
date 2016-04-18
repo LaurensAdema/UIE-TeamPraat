@@ -1,21 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
+using TeamPraat.Properties;
 using TeamPraat.Ui_Elements;
 
 namespace TeamPraat
 {
     public partial class MainForm : Form
     {
+        public static MainForm main;
         public readonly int defaultHeight;
         public readonly int initialSplitterDistance;
         public bool MicMuted;
-        public bool SpeakerMuted;
-        public int Servers;
         public Point originalpos;
         public ConnectedServer selectedServer = null;
-        public static MainForm main;
+        public int Servers;
+        public bool SpeakerMuted;
 
         public MainForm()
         {
@@ -24,7 +25,7 @@ namespace TeamPraat
             originalpos = pbFriendsSlide.Location;
             scMainScreen.SplitterDistance = scMainScreen.Width;
             pbFriendsSlide.Location = new Point(Size.Width - pbFriendsSlide.Width - 10, pbFriendsSlide.Location.Y);
-            pbFriendsSlide.Image = TeamPraat.Properties.Resources.ic_keyboard_arrow_left_black_24dp_2x;
+            pbFriendsSlide.Image = Resources.ic_keyboard_arrow_left_black_24dp_2x;
             scMainScreen.Panel2.Hide();
             defaultHeight = pbEmpty.Location.Y;
             pbFriendsSlide.BringToFront();
@@ -33,21 +34,36 @@ namespace TeamPraat
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            scMainScreen.Panel1.Controls.Clear();
-            scMainScreen.Panel1.Controls.Add(new ServerBrowser(this));
+            //scMainScreen.Panel1.Controls.Clear();
+            //scMainScreen.Panel1.Controls.Add(new ServerBrowser(this));
+            foreach (Control c in scMainScreen.Panel1.Controls)
+            {
+                c.Hide();
+            }
+
+            if (scMainScreen.Panel1.Controls.OfType<ServerBrowser>().Any())
+            {
+                scMainScreen.Panel1.Controls.OfType<ServerBrowser>().First().Show();
+            }
+            else
+            {
+                scMainScreen.Panel1.Controls.Add(new ServerBrowser(this));
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            var b = (PictureBox)sender;
+            var b = (PictureBox) sender;
 
             if (scMainScreen.Panel2.Visible)
             {
                 originalpos = b.Location;
                 b.Location = new Point(Size.Width - b.Width - 10, b.Location.Y);
-                b.Image = TeamPraat.Properties.Resources.ic_keyboard_arrow_left_black_24dp_2x;
-                
-                for (int splitterDistance = initialSplitterDistance; splitterDistance <= scMainScreen.Width; splitterDistance += 1)
+                b.Image = Resources.ic_keyboard_arrow_left_black_24dp_2x;
+
+                for (int splitterDistance = initialSplitterDistance;
+                    splitterDistance <= scMainScreen.Width;
+                    splitterDistance += 1)
                 {
                     DateTime start = DateTime.Now;
                     scMainScreen.SplitterDistance = splitterDistance;
@@ -62,8 +78,10 @@ namespace TeamPraat
             else
             {
                 scMainScreen.Panel2.Show();
-                b.Image = TeamPraat.Properties.Resources.ic_keyboard_arrow_right_black_24dp_2x;
-                for (int splitterDistance = scMainScreen.Width; splitterDistance >= initialSplitterDistance; splitterDistance -= 1)
+                b.Image = Resources.ic_keyboard_arrow_right_black_24dp_2x;
+                for (int splitterDistance = scMainScreen.Width;
+                    splitterDistance >= initialSplitterDistance;
+                    splitterDistance -= 1)
                 {
                     DateTime start = DateTime.Now;
                     scMainScreen.SplitterDistance = splitterDistance;
@@ -80,20 +98,8 @@ namespace TeamPraat
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            if (!SpeakerMuted)
-            {
-                pbSound.BackColor = Color.Red;
-                SpeakerMuted = true;
-            }
-            else
-            {
-                pbSound.BackColor = Color.FromArgb(75, 75, 75);
-                SpeakerMuted = false;
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
+            SpeakerMuted = !SpeakerMuted;
+            pbSound.BackColor = SpeakerMuted ? Color.Red : Color.FromArgb(75, 75, 75);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -104,16 +110,8 @@ namespace TeamPraat
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            if (!MicMuted)
-            {
-                pbMic.BackColor = Color.Red;
-                MicMuted = true;
-            }
-            else
-            {
-                pbMic.BackColor = Color.FromArgb(75, 75, 75);
-                MicMuted = false;
-            }
+            MicMuted = !MicMuted;
+            pbMic.BackColor = MicMuted ? Color.Red : Color.FromArgb(75, 75, 75);
         }
     }
 }

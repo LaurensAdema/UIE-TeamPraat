@@ -28,20 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Dropdown = new System.Windows.Forms.Button();
             this.lbl_Server = new System.Windows.Forms.Label();
             this.lbl_People = new System.Windows.Forms.Label();
+            this.pb_Settings = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Settings)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_Dropdown
-            // 
-            this.btn_Dropdown.Location = new System.Drawing.Point(643, 26);
-            this.btn_Dropdown.Name = "btn_Dropdown";
-            this.btn_Dropdown.Size = new System.Drawing.Size(75, 23);
-            this.btn_Dropdown.TabIndex = 0;
-            this.btn_Dropdown.Text = "button1";
-            this.btn_Dropdown.UseVisualStyleBackColor = true;
-            this.btn_Dropdown.Click += new System.EventHandler(this.btn_Dropdown_Click);
             // 
             // lbl_Server
             // 
@@ -61,27 +52,39 @@
             this.lbl_People.TabIndex = 2;
             this.lbl_People.Text = "label2";
             // 
+            // pb_Settings
+            // 
+            this.pb_Settings.Image = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_down_black_24dp_2x;
+            this.pb_Settings.Location = new System.Drawing.Point(692, 23);
+            this.pb_Settings.Name = "pb_Settings";
+            this.pb_Settings.Size = new System.Drawing.Size(24, 24);
+            this.pb_Settings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_Settings.TabIndex = 3;
+            this.pb_Settings.TabStop = false;
+            this.pb_Settings.Click += new System.EventHandler(this.pb_Settings_Click);
+            // 
             // Server
             // 
             this.AccessibleName = "test";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.pb_Settings);
             this.Controls.Add(this.lbl_People);
             this.Controls.Add(this.lbl_Server);
-            this.Controls.Add(this.btn_Dropdown);
             this.Name = "Server";
             this.Size = new System.Drawing.Size(719, 50);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Server_MouseClick);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Settings)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Dropdown;
         private System.Windows.Forms.Label lbl_Server;
         private System.Windows.Forms.Label lbl_People;
+        private System.Windows.Forms.PictureBox pb_Settings;
     }
 }

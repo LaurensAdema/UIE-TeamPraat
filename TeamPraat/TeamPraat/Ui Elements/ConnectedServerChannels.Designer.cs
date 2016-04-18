@@ -28,18 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lbl_Channels = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // lbl_Channels
+            // 
+            this.lbl_Channels.AutoSize = true;
+            this.lbl_Channels.Location = new System.Drawing.Point(3, 12);
+            this.lbl_Channels.Name = "lbl_Channels";
+            this.lbl_Channels.Size = new System.Drawing.Size(51, 13);
+            this.lbl_Channels.TabIndex = 0;
+            this.lbl_Channels.Text = "Channels";
             // 
             // ConnectedServerChannels
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl_Channels);
             this.Name = "ConnectedServerChannels";
             this.Size = new System.Drawing.Size(677, 333);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lbl_Channels;
     }
 }

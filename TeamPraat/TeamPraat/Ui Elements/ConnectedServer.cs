@@ -11,6 +11,16 @@ namespace TeamPraat.Ui_Elements
         private readonly int initHeight;
         private readonly MainForm main;
         private readonly Server mainServer;
+        private Color border;
+        private Color BorderColor {
+            get { return border; }
+            set { border = value; Refresh(); }
+        }
+        public string ServerName
+        {
+            get { return lblServerName.Text; }
+            set { lblServerName.Text = value; }
+        }
 
         public ConnectedServer(MainForm main, Server server)
         {
@@ -18,9 +28,9 @@ namespace TeamPraat.Ui_Elements
             mainServer = server;
             InitializeComponent();
             initHeight = Height;
-            foreach (var c in main.plConnected.Controls)
+            foreach (object c in main.plConnected.Controls)
             {
-                ConnectedServer cs = c as ConnectedServer;
+                var cs = c as ConnectedServer;
                 if (cs != null)
                 {
                     if (cs.Height != initHeight)
@@ -29,11 +39,18 @@ namespace TeamPraat.Ui_Elements
                     }
                 }
             }
+            BorderColor = Color.Red;
         }
 
-        private void UserControl1_Paint(object sender, PaintEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.Green, ButtonBorderStyle.Solid);
+            base.OnPaint(e);
+            int borderWidth = 3;
+            Color borderColor = BorderColor; //SystemColors.AppWorkspace;
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, borderColor,
+            borderWidth, ButtonBorderStyle.Solid, borderColor, borderWidth,
+            ButtonBorderStyle.Solid, borderColor, borderWidth, ButtonBorderStyle.Solid,
+            borderColor, borderWidth, ButtonBorderStyle.Solid);
         }
 
         private void pb_ServerIcon_MouseClick(object sender, MouseEventArgs e)
@@ -58,8 +75,33 @@ namespace TeamPraat.Ui_Elements
             }
             else
             {
-                main.scMainScreen.Panel1.Controls.Clear();
-                main.scMainScreen.Panel1.Controls.Add(new Server(main));
+                foreach (var c in main.plConnected.Controls)
+                {
+                    ConnectedServer cs = c as ConnectedServer;
+                    if (cs != null)
+                    {
+                        cs.BorderColor = Color.Red;
+                    }
+                        
+                }
+                BorderColor = Color.GreenYellow;
+
+                //main.scMainScreen.Panel1.Controls.Clear();
+                //main.scMainScreen.Panel1.Controls.Add(new Server(main));
+                //Add channels
+                foreach (Control c in main.scMainScreen.Panel1.Controls)
+                {
+                    c.Hide();
+                }
+
+                if (main.scMainScreen.Panel1.Controls.OfType<ConnectedServerChannels>().Any())
+                {
+                    main.scMainScreen.Panel1.Controls.OfType<ConnectedServerChannels>().First().Show();
+                }
+                else
+                {
+                    main.scMainScreen.Panel1.Controls.Add(new ConnectedServerChannels());
+                }
             }
         }
 
@@ -73,6 +115,7 @@ namespace TeamPraat.Ui_Elements
             {
                 Expand();
             }
+            
         }
 
         public void Colaps()
@@ -88,7 +131,9 @@ namespace TeamPraat.Ui_Elements
                 select cs)
             {
                 cs.Location = new Point(cs.Location.X, cs.Location.Y - colapseSize);
+                cs.Refresh();
             }
+            Refresh();
         }
 
         public void Expand()
@@ -103,7 +148,9 @@ namespace TeamPraat.Ui_Elements
                 select cs)
             {
                 cs.Location = new Point(cs.Location.X, cs.Location.Y + colapseSize);
+                cs.Refresh();
             }
+            Refresh();
         }
     }
 }
