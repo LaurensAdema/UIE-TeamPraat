@@ -20,16 +20,5 @@ namespace TeamPraat.Ui_Elements
             InitializeComponent();
             this.main = main;
         }
-
-        private void btnAddServer_Click(object sender, EventArgs e)
-        {
-            main.pbEmpty.Location = new Point(main.pbEmpty.Location.X, main.pbEmpty.Location.Y + main.pbEmpty.Height + DefaultHeight);
-
-            var cs = new ConnectedServer(main);
-            cs.Location = new Point(main.pbEmpty.Location.X, (main.defaultHeight + cs.Height) * main.Servers + DefaultHeight);
-            main.Servers++;
-
-            main.plConnected.Controls.Add(cs);
-        }
     }
 }

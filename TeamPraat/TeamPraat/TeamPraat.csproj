@@ -60,11 +60,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ui Elements\Channel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui Elements\Channel.Designer.cs">
+      <DependentUpon>Channel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui Elements\ConnectedServer.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Ui Elements\ConnectedServer.Designer.cs">
       <DependentUpon>ConnectedServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui Elements\ConnectedServerChannels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui Elements\ConnectedServerChannels.Designer.cs">
+      <DependentUpon>ConnectedServerChannels.cs</DependentUpon>
     </Compile>
     <Compile Include="Ui Elements\Server.cs">
       <SubType>UserControl</SubType>
@@ -94,8 +106,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Ui Elements\Channel.resx">
+      <DependentUpon>Channel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ui Elements\ConnectedServer.resx">
       <DependentUpon>ConnectedServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui Elements\ConnectedServerChannels.resx">
+      <DependentUpon>ConnectedServerChannels.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ui Elements\Server.resx">
       <DependentUpon>Server.cs</DependentUpon>

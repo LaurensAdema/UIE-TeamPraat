@@ -35,7 +35,7 @@
             // 
             // btn_Dropdown
             // 
-            this.btn_Dropdown.Location = new System.Drawing.Point(407, 26);
+            this.btn_Dropdown.Location = new System.Drawing.Point(643, 26);
             this.btn_Dropdown.Name = "btn_Dropdown";
             this.btn_Dropdown.Size = new System.Drawing.Size(75, 23);
             this.btn_Dropdown.TabIndex = 0;
@@ -45,12 +45,12 @@
             // 
             // lbl_Server
             // 
-            this.lbl_Server.AutoSize = true;
-            this.lbl_Server.Location = new System.Drawing.Point(25, 15);
+            this.lbl_Server.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Server.Location = new System.Drawing.Point(25, 11);
             this.lbl_Server.Name = "lbl_Server";
-            this.lbl_Server.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Server.Size = new System.Drawing.Size(212, 17);
             this.lbl_Server.TabIndex = 1;
-            this.lbl_Server.Text = "label1";
+            this.lbl_Server.Text = "Text?";
             // 
             // lbl_People
             // 
@@ -63,13 +63,15 @@
             // 
             // Server
             // 
+            this.AccessibleName = "test";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.lbl_People);
             this.Controls.Add(this.lbl_Server);
             this.Controls.Add(this.btn_Dropdown);
             this.Name = "Server";
-            this.Size = new System.Drawing.Size(485, 52);
+            this.Size = new System.Drawing.Size(719, 50);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Server_MouseClick);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -12,12 +12,27 @@ namespace TeamPraat.Ui_Elements
 {
     public partial class Server : UserControl
     {
+        [Description("The name of the server"), Category("Data")]
+        public string ServerName
+        {
+            get { return lbl_Server.Text; }
+            set { lbl_Server.Text = value; }
+        }
+
+        private int DefaultHeight = 12;
         private MainForm main;
+        public ConnectedServer OpenServer;
 
         public Server(MainForm main)
         {
-            this.main = main;
             InitializeComponent();
+            this.main = main;
+        }
+
+        public Server()
+        {
+            InitializeComponent();
+            main = MainForm.main;
         }
 
         private void btn_Dropdown_Click(object sender, EventArgs e)
@@ -27,7 +42,19 @@ namespace TeamPraat.Ui_Elements
 
         private void Server_MouseClick(object sender, MouseEventArgs e)
         {
-            //Connect
+            if (OpenServer == null)
+            {
+                main.pbEmpty.Location = new Point(main.pbEmpty.Location.X,
+                    main.pbEmpty.Location.Y + main.pbEmpty.Height + DefaultHeight);
+
+                ConnectedServer cs;
+                OpenServer = cs = new ConnectedServer(main, this);
+                cs.Location = new Point(main.pbEmpty.Location.X,
+                    (main.defaultHeight + cs.Height)*main.Servers + DefaultHeight);
+                main.Servers++;
+
+                main.plConnected.Controls.Add(cs);
+            }
         }
     }
 }

@@ -15,6 +15,7 @@ namespace TeamPraat
         public int Servers;
         public Point originalpos;
         public ConnectedServer selectedServer = null;
+        public static MainForm main;
 
         public MainForm()
         {
@@ -27,6 +28,7 @@ namespace TeamPraat
             scMainScreen.Panel2.Hide();
             defaultHeight = pbEmpty.Location.Y;
             pbFriendsSlide.BringToFront();
+            main = this;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -10,10 +10,12 @@ namespace TeamPraat.Ui_Elements
         private readonly int colapseSize = 50;
         private readonly int initHeight;
         private readonly MainForm main;
+        private readonly Server mainServer;
 
-        public ConnectedServer(MainForm main)
+        public ConnectedServer(MainForm main, Server server)
         {
             this.main = main;
+            mainServer = server;
             InitializeComponent();
             initHeight = Height;
             foreach (var c in main.plConnected.Controls)
@@ -39,6 +41,7 @@ namespace TeamPraat.Ui_Elements
             if (e.Button == MouseButtons.Right)
             {
                 MessageBox.Show("Disconnected");
+                mainServer.OpenServer = null;
                 main.pbEmpty.Location = new Point(main.pbEmpty.Location.X,
                     main.pbEmpty.Location.Y - main.pbEmpty.Height - 12);
                 main.Servers--;
@@ -78,10 +81,10 @@ namespace TeamPraat.Ui_Elements
             main.selectedServer = null;
 
             foreach (ConnectedServer cs in from Control c in main.plConnected.Controls
-                                           select c as ConnectedServer
+                select c as ConnectedServer
                 into cs
-                                           where cs?.Location.Y > Location.Y
-                                           select cs)
+                where cs?.Location.Y > Location.Y
+                select cs)
             {
                 cs.Location = new Point(cs.Location.X, cs.Location.Y - colapseSize);
             }
@@ -93,10 +96,10 @@ namespace TeamPraat.Ui_Elements
             main.pbEmpty.Location = new Point(main.pbEmpty.Location.X, main.pbEmpty.Location.Y + colapseSize);
             main.selectedServer = this;
             foreach (ConnectedServer cs in from Control c in main.plConnected.Controls
-                                           select c as ConnectedServer
+                select c as ConnectedServer
                 into cs
-                                           where cs?.Location.Y > Location.Y
-                                           select cs)
+                where cs?.Location.Y > Location.Y
+                select cs)
             {
                 cs.Location = new Point(cs.Location.X, cs.Location.Y + colapseSize);
             }
