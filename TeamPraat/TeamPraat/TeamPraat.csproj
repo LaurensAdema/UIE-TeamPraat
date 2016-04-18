@@ -78,6 +78,12 @@
     <Compile Include="Ui Elements\ConnectedServerChannels.Designer.cs">
       <DependentUpon>ConnectedServerChannels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ui Elements\FirstScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui Elements\FirstScreen.Designer.cs">
+      <DependentUpon>FirstScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui Elements\Server.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     <EmbeddedResource Include="Ui Elements\ConnectedServerChannels.resx">
       <DependentUpon>ConnectedServerChannels.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ui Elements\FirstScreen.resx">
+      <DependentUpon>FirstScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ui Elements\Server.resx">
       <DependentUpon>Server.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +157,7 @@
     <None Include="Resources\ic_keyboard_arrow_left_white_24dp_2x.png" />
     <None Include="Resources\ic_keyboard_arrow_right_white_24dp_2x.png" />
     <None Include="Resources\ic_add_circle_white_24dp_2x.png" />
+    <None Include="Resources\ic_person_add_white_24dp_2x.png" />
     <Content Include="Ui Elements\ic_keyboard_arrow_down_black_24dp_2x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
