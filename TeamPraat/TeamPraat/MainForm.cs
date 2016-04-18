@@ -113,5 +113,10 @@ namespace TeamPraat
             MicMuted = !MicMuted;
             pbMic.BackColor = MicMuted ? Color.Red : Color.FromArgb(75, 75, 75);
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Vriend toegevoedt");
+        }
     }
 }

@@ -147,6 +147,7 @@
     </None>
     <None Include="Resources\ic_keyboard_arrow_left_white_24dp_2x.png" />
     <None Include="Resources\ic_keyboard_arrow_right_white_24dp_2x.png" />
+    <None Include="Resources\ic_add_circle_white_24dp_2x.png" />
     <Content Include="Ui Elements\ic_keyboard_arrow_down_black_24dp_2x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
