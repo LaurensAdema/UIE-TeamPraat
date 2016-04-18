@@ -32,6 +32,8 @@
             this.server3 = new TeamPraat.Ui_Elements.Server();
             this.server2 = new TeamPraat.Ui_Elements.Server();
             this.Tjidde_Server = new TeamPraat.Ui_Elements.Server();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -48,6 +50,7 @@
             // server3
             // 
             this.server3.AccessibleName = "Server 3";
+            this.server3.BackColor = System.Drawing.SystemColors.ControlDark;
             this.server3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.server3.ConnecedPeople = 10;
             this.server3.Location = new System.Drawing.Point(32, 223);
@@ -59,6 +62,7 @@
             // server2
             // 
             this.server2.AccessibleName = "Server 2";
+            this.server2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.server2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.server2.ConnecedPeople = 10;
             this.server2.Location = new System.Drawing.Point(32, 165);
@@ -80,10 +84,34 @@
             this.Tjidde_Server.Size = new System.Drawing.Size(721, 52);
             this.Tjidde_Server.TabIndex = 2;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(28, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "BookMarks";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(28, 278);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 24);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Servers\'";
+            // 
             // ServerBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.server3);
             this.Controls.Add(this.server2);
             this.Controls.Add(this.Tjidde_Server);
@@ -100,5 +128,7 @@
         private Server Tjidde_Server;
         private Server server2;
         private Server server3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
