@@ -158,6 +158,20 @@ namespace TeamPraat.Ui_Elements
             {
                 cs.Location = new Point(cs.Location.X, cs.Location.Y - cs.Height - 12);
             }
+
+            foreach (Control c in main.scMainScreen.Panel1.Controls)
+            {
+                c.Hide();
+            }
+
+            if (main.scMainScreen.Panel1.Controls.OfType<FirstScreen>().Any())
+            {
+                main.scMainScreen.Panel1.Controls.OfType<FirstScreen>().First().Show();
+            }
+            else
+            {
+                main.scMainScreen.Panel1.Controls.Add(new FirstScreen());
+            }
             Dispose();
         }
     }
