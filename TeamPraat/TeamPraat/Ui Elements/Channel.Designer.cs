@@ -48,6 +48,8 @@
             this.Controls.Add(this.lbl_ChannelName);
             this.Name = "Channel";
             this.Size = new System.Drawing.Size(648, 58);
+            this.Load += new System.EventHandler(this.Channel_Load);
+            this.Click += new System.EventHandler(this.Channel_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

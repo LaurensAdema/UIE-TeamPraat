@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.lbl_Channels = new System.Windows.Forms.Label();
-            this.channel2 = new Channel();
-            this.channel1 = new Channel();
-            this.channel3 = new Channel();
-            this.channel4 = new Channel();
+            this.channel4 = new TeamPraat.Ui_Elements.Channel();
+            this.channel3 = new TeamPraat.Ui_Elements.Channel();
+            this.channel2 = new TeamPraat.Ui_Elements.Channel();
+            this.channel1 = new TeamPraat.Ui_Elements.Channel();
             this.SuspendLayout();
             // 
             // lbl_Channels
@@ -43,6 +43,22 @@
             this.lbl_Channels.Size = new System.Drawing.Size(51, 13);
             this.lbl_Channels.TabIndex = 0;
             this.lbl_Channels.Text = "Channels";
+            // 
+            // channel4
+            // 
+            this.channel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.channel4.Location = new System.Drawing.Point(5, 222);
+            this.channel4.Name = "channel4";
+            this.channel4.Size = new System.Drawing.Size(648, 58);
+            this.channel4.TabIndex = 4;
+            // 
+            // channel3
+            // 
+            this.channel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.channel3.Location = new System.Drawing.Point(5, 158);
+            this.channel3.Name = "channel3";
+            this.channel3.Size = new System.Drawing.Size(648, 58);
+            this.channel3.TabIndex = 3;
             // 
             // channel2
             // 
@@ -59,22 +75,6 @@
             this.channel1.Name = "channel1";
             this.channel1.Size = new System.Drawing.Size(650, 60);
             this.channel1.TabIndex = 1;
-            // 
-            // channel3
-            // 
-            this.channel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.channel3.Location = new System.Drawing.Point(5, 158);
-            this.channel3.Name = "channel3";
-            this.channel3.Size = new System.Drawing.Size(648, 58);
-            this.channel3.TabIndex = 3;
-            // 
-            // channel4
-            // 
-            this.channel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.channel4.Location = new System.Drawing.Point(5, 222);
-            this.channel4.Name = "channel4";
-            this.channel4.Size = new System.Drawing.Size(648, 58);
-            this.channel4.TabIndex = 4;
             // 
             // ConnectedServerChannels
             // 
