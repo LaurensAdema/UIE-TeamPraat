@@ -19,6 +19,16 @@ namespace TeamPraat.Ui_Elements
             set { lbl_Server.Text = value; }
         }
 
+        [Description("People in the server"), Category("Data")]
+        public int ConnecedPeople
+        {
+            get { return people; }
+            set
+            {
+                people = value; lbl_People.Text = people + " / Infinite"; }
+        }
+
+        private int people;
         private int DefaultHeight = 12;
         private MainForm main;
         public ConnectedServer OpenServer;
@@ -44,6 +54,7 @@ namespace TeamPraat.Ui_Elements
         {
             if (OpenServer == null)
             {
+                ConnecedPeople++;
                 main.pbEmpty.Location = new Point(main.pbEmpty.Location.X,
                     main.pbEmpty.Location.Y + main.pbEmpty.Height + DefaultHeight);
 

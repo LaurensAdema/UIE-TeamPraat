@@ -41,6 +41,7 @@ namespace TeamPraat.Ui_Elements
             if (e.Button == MouseButtons.Right)
             {
                 MessageBox.Show("Disconnected");
+                mainServer.ConnecedPeople--;
                 mainServer.OpenServer = null;
                 main.pbEmpty.Location = new Point(main.pbEmpty.Location.X,
                     main.pbEmpty.Location.Y - main.pbEmpty.Height - 12);

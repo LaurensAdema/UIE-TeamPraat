@@ -49,6 +49,7 @@
             // 
             this.server3.AccessibleName = "Server 3";
             this.server3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.server3.ConnecedPeople = 10;
             this.server3.Location = new System.Drawing.Point(32, 223);
             this.server3.Name = "server3";
             this.server3.ServerName = "Other_Server";
@@ -59,6 +60,7 @@
             // 
             this.server2.AccessibleName = "Server 2";
             this.server2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.server2.ConnecedPeople = 10;
             this.server2.Location = new System.Drawing.Point(32, 165);
             this.server2.Name = "server2";
             this.server2.ServerName = "Michel_Server";
@@ -70,6 +72,7 @@
             this.Tjidde_Server.AccessibleDescription = "";
             this.Tjidde_Server.AccessibleName = "Tijdde Server";
             this.Tjidde_Server.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Tjidde_Server.ConnecedPeople = 10;
             this.Tjidde_Server.Location = new System.Drawing.Point(32, 107);
             this.Tjidde_Server.Name = "Tjidde_Server";
             this.Tjidde_Server.ServerName = "Tjidde_Server";
