@@ -47,7 +47,7 @@
             // pbDisconnect
             // 
             this.pbDisconnect.Image = global::TeamPraat.Properties.Resources.ic_clear_black_24dp_2x;
-            this.pbDisconnect.Location = new System.Drawing.Point(3, 110);
+            this.pbDisconnect.Location = new System.Drawing.Point(3, 108);
             this.pbDisconnect.Name = "pbDisconnect";
             this.pbDisconnect.Size = new System.Drawing.Size(25, 27);
             this.pbDisconnect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -57,8 +57,9 @@
             // 
             // pbServerSettings
             // 
+            this.pbServerSettings.BackColor = System.Drawing.Color.White;
             this.pbServerSettings.Image = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_down_black_24dp_2x;
-            this.pbServerSettings.Location = new System.Drawing.Point(60, 60);
+            this.pbServerSettings.Location = new System.Drawing.Point(60, 58);
             this.pbServerSettings.Name = "pbServerSettings";
             this.pbServerSettings.Size = new System.Drawing.Size(25, 27);
             this.pbServerSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

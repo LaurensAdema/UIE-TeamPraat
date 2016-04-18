@@ -141,7 +141,7 @@ namespace TeamPraat.Ui_Elements
 
         private void pbDisconnect_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Disconnected");
+            Collapse();
             mainServer.ConnecedPeople--;
             mainServer.OpenServer = null;
             main.pbEmpty.Location = new Point(main.pbEmpty.Location.X,

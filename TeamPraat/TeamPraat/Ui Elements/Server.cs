@@ -43,11 +43,7 @@ namespace TeamPraat.Ui_Elements
             main = MainForm.main;
         }
 
-        private void btn_Dropdown_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void Server_MouseClick(object sender, MouseEventArgs e)
+        private void pb_Settings_Click(object sender, EventArgs e)
         {
             if (OpenServer == null)
             {
@@ -59,15 +55,11 @@ namespace TeamPraat.Ui_Elements
                 OpenServer = cs = new ConnectedServer(main, this);
                 cs.ServerName = ServerName;
                 cs.Location = new Point(main.pbEmpty.Location.X,
-                    (main.defaultHeight + cs.Height)*main.Servers + DefaultHeight);
+                    (main.defaultHeight + cs.Height) * main.Servers + DefaultHeight);
                 main.Servers++;
 
                 main.plConnected.Controls.Add(cs);
             }
-        }
-
-        private void pb_Settings_Click(object sender, EventArgs e)
-        {
         }
     }
 }

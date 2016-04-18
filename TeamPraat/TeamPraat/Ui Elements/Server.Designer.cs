@@ -36,10 +36,11 @@
             // 
             // lbl_Server
             // 
+            this.lbl_Server.AutoSize = true;
             this.lbl_Server.ForeColor = System.Drawing.Color.Black;
             this.lbl_Server.Location = new System.Drawing.Point(25, 11);
             this.lbl_Server.Name = "lbl_Server";
-            this.lbl_Server.Size = new System.Drawing.Size(212, 17);
+            this.lbl_Server.Size = new System.Drawing.Size(34, 13);
             this.lbl_Server.TabIndex = 1;
             this.lbl_Server.Text = "Text?";
             // 
@@ -54,7 +55,7 @@
             // 
             // pb_Settings
             // 
-            this.pb_Settings.Image = global::TeamPraat.Properties.Resources.ic_keyboard_arrow_down_black_24dp_2x;
+            this.pb_Settings.Image = global::TeamPraat.Properties.Resources.ic_control_point_black_24dp_2x;
             this.pb_Settings.Location = new System.Drawing.Point(692, 23);
             this.pb_Settings.Name = "pb_Settings";
             this.pb_Settings.Size = new System.Drawing.Size(24, 24);
@@ -75,7 +76,6 @@
             this.Controls.Add(this.lbl_Server);
             this.Name = "Server";
             this.Size = new System.Drawing.Size(719, 50);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Server_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Settings)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
