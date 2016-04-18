@@ -38,40 +38,45 @@
             // lbl_Channels
             // 
             this.lbl_Channels.AutoSize = true;
-            this.lbl_Channels.Location = new System.Drawing.Point(14, 10);
+            this.lbl_Channels.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Channels.Location = new System.Drawing.Point(3, 34);
             this.lbl_Channels.Name = "lbl_Channels";
-            this.lbl_Channels.Size = new System.Drawing.Size(51, 13);
+            this.lbl_Channels.Size = new System.Drawing.Size(163, 39);
             this.lbl_Channels.TabIndex = 0;
             this.lbl_Channels.Text = "Channels";
             // 
             // channel4
             // 
+            this.channel4.BackColor = System.Drawing.SystemColors.ControlDark;
             this.channel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.channel4.Location = new System.Drawing.Point(5, 222);
+            this.channel4.Location = new System.Drawing.Point(5, 272);
             this.channel4.Name = "channel4";
             this.channel4.Size = new System.Drawing.Size(648, 58);
             this.channel4.TabIndex = 4;
             // 
             // channel3
             // 
+            this.channel3.BackColor = System.Drawing.SystemColors.ControlDark;
             this.channel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.channel3.Location = new System.Drawing.Point(5, 158);
+            this.channel3.Location = new System.Drawing.Point(5, 208);
             this.channel3.Name = "channel3";
             this.channel3.Size = new System.Drawing.Size(648, 58);
             this.channel3.TabIndex = 3;
             // 
             // channel2
             // 
+            this.channel2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.channel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.channel2.Location = new System.Drawing.Point(3, 92);
+            this.channel2.Location = new System.Drawing.Point(5, 142);
             this.channel2.Name = "channel2";
             this.channel2.Size = new System.Drawing.Size(650, 60);
             this.channel2.TabIndex = 2;
             // 
             // channel1
             // 
+            this.channel1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.channel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.channel1.Location = new System.Drawing.Point(3, 26);
+            this.channel1.Location = new System.Drawing.Point(5, 76);
             this.channel1.Name = "channel1";
             this.channel1.Size = new System.Drawing.Size(650, 60);
             this.channel1.TabIndex = 1;

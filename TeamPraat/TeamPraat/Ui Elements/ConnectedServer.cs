@@ -12,6 +12,8 @@ namespace TeamPraat.Ui_Elements
         private readonly MainForm main;
         private readonly Server mainServer;
         private Color border;
+        private ConnectedServerChannels csc;
+
         private Color BorderColor {
             get { return border; }
             set { border = value; Refresh(); }
@@ -40,6 +42,7 @@ namespace TeamPraat.Ui_Elements
                 }
             }
             BorderColor = Color.Red;
+            csc = new ConnectedServerChannels();
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -76,13 +79,13 @@ namespace TeamPraat.Ui_Elements
                     c.Hide();
                 }
 
-                if (main.scMainScreen.Panel1.Controls.OfType<ConnectedServerChannels>().Any())
+                if (main.scMainScreen.Panel1.Controls.Contains(csc))
                 {
-                    main.scMainScreen.Panel1.Controls.OfType<ConnectedServerChannels>().First().Show();
+                    csc.Show();
                 }
                 else
                 {
-                    main.scMainScreen.Panel1.Controls.Add(new ConnectedServerChannels());
+                    main.scMainScreen.Panel1.Controls.Add(csc);
                 }
             }
         }
