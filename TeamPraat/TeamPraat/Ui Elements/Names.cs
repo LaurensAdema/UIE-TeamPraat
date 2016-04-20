@@ -9,7 +9,7 @@ namespace TeamPraat.Ui_Elements
     class Names
     {
         public List<String> names = new List<string>();
-
+        Random r = new Random();
         public Names(){
             names.Add("Delorse");
             names.Add("Kattie");
@@ -111,6 +111,13 @@ namespace TeamPraat.Ui_Elements
             names.Add("Jodie");
             names.Add("Gregoria");
             names.Add("Catherina");
+        }
+
+        public String RandomName(){
+            
+            int i = r.Next(names.Count);
+            String name = names[i];
+            return name;
         }
     }
 }

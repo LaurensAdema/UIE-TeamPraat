@@ -193,10 +193,9 @@
             // 
             this.lbFriends.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.lbFriends.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbFriends.Font = new System.Drawing.Font("Gill Sans MT", 8.25F);
+            this.lbFriends.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lbFriends.ForeColor = System.Drawing.Color.White;
             this.lbFriends.FormattingEnabled = true;
-            this.lbFriends.ItemHeight = 16;
             this.lbFriends.Items.AddRange(new object[] {
             "Online",
             " Karel",
@@ -262,7 +261,7 @@
             this.lbFriends.Location = new System.Drawing.Point(3, 48);
             this.lbFriends.Name = "lbFriends";
             this.lbFriends.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lbFriends.Size = new System.Drawing.Size(166, 592);
+            this.lbFriends.Size = new System.Drawing.Size(166, 585);
             this.lbFriends.TabIndex = 1;
             // 
             // pbFriendsSlide
