@@ -19,11 +19,11 @@ namespace TeamPraat.Ui_Elements
             this.main = main;
             servers = new List<Server>();
             r = new Random();
-            int almount = r.Next(100);
+            int almount = 50 + r.Next(50);
 
             for (int i = 0; i < almount; i++)
             {
-                var s = new Server {bookmark = r.Next(10) == 1, ServerName = "ServerNr: " + i, ConnecedPeople = r.Next(1000)};
+                var s = new Server {bookmark = r.Next(50) == 1, ServerName = "ServerNr: " + i, ConnecedPeople = r.Next(1000)};
                 servers.Add(s);
             }
 
@@ -33,7 +33,7 @@ namespace TeamPraat.Ui_Elements
 
         private void pnlBookmark_ControlAdded(object sender, ControlEventArgs e)
         {
-            e.Control.Location = new Point(0, (pnlBookmark.Controls.Count - 1) * e.Control.Height + 10);
+            e.Control.Location = new Point(0, (pnlBookmark.Controls.Count - 1) * e.Control.Height + 20);
             pnlBookmark.Height = (pnlBookmark.Controls.Count - 1)*e.Control.Height + 10;
             lblServers.Location = new Point(lblServers.Location.X,
                 pnlBookmark.Height + pnlBookmark.Location.Y + lblServers.Height);

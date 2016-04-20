@@ -35,7 +35,9 @@
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.pnlBookmark = new System.Windows.Forms.Panel();
             this.pnlServers = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblBrouwser
@@ -54,7 +56,7 @@
             this.lblBookmarks.AutoSize = true;
             this.lblBookmarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBookmarks.ForeColor = System.Drawing.Color.White;
-            this.lblBookmarks.Location = new System.Drawing.Point(28, 84);
+            this.lblBookmarks.Location = new System.Drawing.Point(3, 0);
             this.lblBookmarks.Name = "lblBookmarks";
             this.lblBookmarks.Size = new System.Drawing.Size(89, 20);
             this.lblBookmarks.TabIndex = 5;
@@ -65,7 +67,7 @@
             this.lblServers.AutoSize = true;
             this.lblServers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblServers.ForeColor = System.Drawing.Color.White;
-            this.lblServers.Location = new System.Drawing.Point(28, 278);
+            this.lblServers.Location = new System.Drawing.Point(3, 194);
             this.lblServers.Name = "lblServers";
             this.lblServers.Size = new System.Drawing.Size(74, 24);
             this.lblServers.TabIndex = 6;
@@ -82,7 +84,7 @@
             "Counter Strike: Global Offensive",
             "cyka bliat"});
             this.tbSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.tbSearch.Location = new System.Drawing.Point(557, 84);
+            this.tbSearch.Location = new System.Drawing.Point(557, 54);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(168, 20);
             this.tbSearch.TabIndex = 11;
@@ -90,7 +92,7 @@
             // pbSearch
             // 
             this.pbSearch.Image = global::TeamPraat.Properties.Resources.ic_search_white_24dp_2x;
-            this.pbSearch.Location = new System.Drawing.Point(731, 84);
+            this.pbSearch.Location = new System.Drawing.Point(731, 54);
             this.pbSearch.Name = "pbSearch";
             this.pbSearch.Size = new System.Drawing.Size(20, 20);
             this.pbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -99,7 +101,7 @@
             // 
             // pnlBookmark
             // 
-            this.pnlBookmark.Location = new System.Drawing.Point(32, 107);
+            this.pnlBookmark.Location = new System.Drawing.Point(3, 23);
             this.pnlBookmark.MinimumSize = new System.Drawing.Size(719, 50);
             this.pnlBookmark.Name = "pnlBookmark";
             this.pnlBookmark.Size = new System.Drawing.Size(719, 168);
@@ -108,26 +110,37 @@
             // 
             // pnlServers
             // 
-            this.pnlServers.Location = new System.Drawing.Point(32, 305);
+            this.pnlServers.Location = new System.Drawing.Point(3, 221);
             this.pnlServers.Name = "pnlServers";
             this.pnlServers.Size = new System.Drawing.Size(719, 239);
             this.pnlServers.TabIndex = 14;
             this.pnlServers.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.pnlServers_ControlAdded);
             // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.pnlBookmark);
+            this.panel1.Controls.Add(this.pnlServers);
+            this.panel1.Controls.Add(this.lblBookmarks);
+            this.panel1.Controls.Add(this.lblServers);
+            this.panel1.Location = new System.Drawing.Point(25, 80);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(747, 464);
+            this.panel1.TabIndex = 15;
+            // 
             // ServerBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pnlServers);
-            this.Controls.Add(this.pnlBookmark);
             this.Controls.Add(this.pbSearch);
             this.Controls.Add(this.tbSearch);
-            this.Controls.Add(this.lblServers);
-            this.Controls.Add(this.lblBookmarks);
             this.Controls.Add(this.lblBrouwser);
+            this.Controls.Add(this.panel1);
             this.Name = "ServerBrowser";
             this.Size = new System.Drawing.Size(775, 565);
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +154,6 @@
         private System.Windows.Forms.PictureBox pbSearch;
         private System.Windows.Forms.Panel pnlBookmark;
         private System.Windows.Forms.Panel pnlServers;
+        private System.Windows.Forms.Panel panel1;
     }
 }
