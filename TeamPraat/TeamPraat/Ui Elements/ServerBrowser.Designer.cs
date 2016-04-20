@@ -28,53 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblBrouwser = new System.Windows.Forms.Label();
+            this.lblBookmarks = new System.Windows.Forms.Label();
+            this.lblServers = new System.Windows.Forms.Label();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.pbSearch = new System.Windows.Forms.PictureBox();
-            this.server6 = new TeamPraat.Ui_Elements.Server();
-            this.server5 = new TeamPraat.Ui_Elements.Server();
-            this.server4 = new TeamPraat.Ui_Elements.Server();
-            this.server1 = new TeamPraat.Ui_Elements.Server();
-            this.server3 = new TeamPraat.Ui_Elements.Server();
-            this.server2 = new TeamPraat.Ui_Elements.Server();
-            this.Tjidde_Server = new TeamPraat.Ui_Elements.Server();
+            this.pnlBookmark = new System.Windows.Forms.Panel();
+            this.pnlServers = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblBrouwser
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(26, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 33);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Server Browser";
+            this.lblBrouwser.AutoSize = true;
+            this.lblBrouwser.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrouwser.ForeColor = System.Drawing.Color.White;
+            this.lblBrouwser.Location = new System.Drawing.Point(26, 25);
+            this.lblBrouwser.Name = "lblBrouwser";
+            this.lblBrouwser.Size = new System.Drawing.Size(230, 33);
+            this.lblBrouwser.TabIndex = 1;
+            this.lblBrouwser.Text = "Server Browser";
             // 
-            // label2
+            // lblBookmarks
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(28, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "BookMarks";
+            this.lblBookmarks.AutoSize = true;
+            this.lblBookmarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookmarks.ForeColor = System.Drawing.Color.White;
+            this.lblBookmarks.Location = new System.Drawing.Point(28, 84);
+            this.lblBookmarks.Name = "lblBookmarks";
+            this.lblBookmarks.Size = new System.Drawing.Size(89, 20);
+            this.lblBookmarks.TabIndex = 5;
+            this.lblBookmarks.Text = "BookMarks";
             // 
-            // label3
+            // lblServers
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(28, 278);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 24);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Servers\'";
+            this.lblServers.AutoSize = true;
+            this.lblServers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServers.ForeColor = System.Drawing.Color.White;
+            this.lblServers.Location = new System.Drawing.Point(28, 278);
+            this.lblServers.Name = "lblServers";
+            this.lblServers.Size = new System.Drawing.Size(74, 24);
+            this.lblServers.TabIndex = 6;
+            this.lblServers.Text = "Servers";
             // 
             // tbSearch
             // 
@@ -102,109 +97,33 @@
             this.pbSearch.TabIndex = 12;
             this.pbSearch.TabStop = false;
             // 
-            // server6
+            // pnlBookmark
             // 
-            this.server6.AccessibleName = "test";
-            this.server6.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.server6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.server6.ConnecedPeople = 94;
-            this.server6.Location = new System.Drawing.Point(32, 473);
-            this.server6.Name = "server6";
-            this.server6.ServerName = "cyka bliat";
-            this.server6.Size = new System.Drawing.Size(719, 50);
-            this.server6.TabIndex = 10;
+            this.pnlBookmark.Location = new System.Drawing.Point(32, 107);
+            this.pnlBookmark.Name = "pnlBookmark";
+            this.pnlBookmark.Size = new System.Drawing.Size(719, 168);
+            this.pnlBookmark.TabIndex = 13;
             // 
-            // server5
+            // pnlServers
             // 
-            this.server5.AccessibleName = "test";
-            this.server5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.server5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.server5.ConnecedPeople = 189245;
-            this.server5.Location = new System.Drawing.Point(32, 417);
-            this.server5.Name = "server5";
-            this.server5.ServerName = "Counter Strike: Global Offensive";
-            this.server5.Size = new System.Drawing.Size(719, 50);
-            this.server5.TabIndex = 9;
-            // 
-            // server4
-            // 
-            this.server4.AccessibleName = "test";
-            this.server4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.server4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.server4.ConnecedPeople = 0;
-            this.server4.Location = new System.Drawing.Point(32, 361);
-            this.server4.Name = "server4";
-            this.server4.ServerName = "Call of duty Server";
-            this.server4.Size = new System.Drawing.Size(719, 50);
-            this.server4.TabIndex = 8;
-            // 
-            // server1
-            // 
-            this.server1.AccessibleName = "test";
-            this.server1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.server1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.server1.ConnecedPeople = 2;
-            this.server1.Location = new System.Drawing.Point(32, 305);
-            this.server1.Name = "server1";
-            this.server1.ServerName = "Sinclair_Server";
-            this.server1.Size = new System.Drawing.Size(719, 50);
-            this.server1.TabIndex = 7;
-            // 
-            // server3
-            // 
-            this.server3.AccessibleName = "Server 3";
-            this.server3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.server3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.server3.ConnecedPeople = 10;
-            this.server3.Location = new System.Drawing.Point(32, 223);
-            this.server3.Name = "server3";
-            this.server3.ServerName = "Other_Server";
-            this.server3.Size = new System.Drawing.Size(721, 52);
-            this.server3.TabIndex = 4;
-            // 
-            // server2
-            // 
-            this.server2.AccessibleName = "Server 2";
-            this.server2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.server2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.server2.ConnecedPeople = 10;
-            this.server2.Location = new System.Drawing.Point(32, 165);
-            this.server2.Name = "server2";
-            this.server2.ServerName = "Michel_Server";
-            this.server2.Size = new System.Drawing.Size(721, 52);
-            this.server2.TabIndex = 3;
-            // 
-            // Tjidde_Server
-            // 
-            this.Tjidde_Server.AccessibleDescription = "";
-            this.Tjidde_Server.AccessibleName = "Tijdde Server";
-            this.Tjidde_Server.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Tjidde_Server.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Tjidde_Server.ConnecedPeople = 10;
-            this.Tjidde_Server.Location = new System.Drawing.Point(32, 107);
-            this.Tjidde_Server.Name = "Tjidde_Server";
-            this.Tjidde_Server.ServerName = "Tjidde_Server";
-            this.Tjidde_Server.Size = new System.Drawing.Size(721, 52);
-            this.Tjidde_Server.TabIndex = 2;
+            this.pnlServers.Location = new System.Drawing.Point(32, 305);
+            this.pnlServers.Name = "pnlServers";
+            this.pnlServers.Size = new System.Drawing.Size(719, 239);
+            this.pnlServers.TabIndex = 14;
             // 
             // ServerBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pnlServers);
+            this.Controls.Add(this.pnlBookmark);
             this.Controls.Add(this.pbSearch);
             this.Controls.Add(this.tbSearch);
-            this.Controls.Add(this.server6);
-            this.Controls.Add(this.server5);
-            this.Controls.Add(this.server4);
-            this.Controls.Add(this.server1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.server3);
-            this.Controls.Add(this.server2);
-            this.Controls.Add(this.Tjidde_Server);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblServers);
+            this.Controls.Add(this.lblBookmarks);
+            this.Controls.Add(this.lblBrouwser);
             this.Name = "ServerBrowser";
-            this.Size = new System.Drawing.Size(757, 563);
+            this.Size = new System.Drawing.Size(775, 565);
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -212,17 +131,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private Server Tjidde_Server;
-        private Server server2;
-        private Server server3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private Server server1;
-        private Server server4;
-        private Server server5;
-        private Server server6;
+        private System.Windows.Forms.Label lblBrouwser;
+        private System.Windows.Forms.Label lblBookmarks;
+        private System.Windows.Forms.Label lblServers;
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.PictureBox pbSearch;
+        private System.Windows.Forms.Panel pnlBookmark;
+        private System.Windows.Forms.Panel pnlServers;
     }
 }

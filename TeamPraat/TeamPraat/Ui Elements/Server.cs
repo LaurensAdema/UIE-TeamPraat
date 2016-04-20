@@ -10,6 +10,7 @@ namespace TeamPraat.Ui_Elements
         private readonly int DefaultHeight = 12;
         private readonly MainForm main;
         public ConnectedServer OpenServer;
+        public bool bookmark = false;
 
         private int people;
 
