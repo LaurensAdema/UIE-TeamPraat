@@ -100,9 +100,11 @@
             // pnlBookmark
             // 
             this.pnlBookmark.Location = new System.Drawing.Point(32, 107);
+            this.pnlBookmark.MinimumSize = new System.Drawing.Size(719, 50);
             this.pnlBookmark.Name = "pnlBookmark";
             this.pnlBookmark.Size = new System.Drawing.Size(719, 168);
             this.pnlBookmark.TabIndex = 13;
+            this.pnlBookmark.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.pnlBookmark_ControlAdded);
             // 
             // pnlServers
             // 
@@ -110,6 +112,7 @@
             this.pnlServers.Name = "pnlServers";
             this.pnlServers.Size = new System.Drawing.Size(719, 239);
             this.pnlServers.TabIndex = 14;
+            this.pnlServers.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.pnlServers_ControlAdded);
             // 
             // ServerBrowser
             // 

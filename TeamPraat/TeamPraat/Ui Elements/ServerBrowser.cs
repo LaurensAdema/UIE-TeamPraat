@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -17,6 +18,7 @@ namespace TeamPraat.Ui_Elements
 
             this.main = main;
             servers = new List<Server>();
+            r = new Random();
             int almount = r.Next(100);
 
             for (int i = 0; i < almount; i++)
@@ -27,6 +29,22 @@ namespace TeamPraat.Ui_Elements
 
             pnlBookmark.Controls.AddRange(servers.Where(s => s.bookmark).ToArray());
             pnlServers.Controls.AddRange(servers.Where(s => !s.bookmark).ToArray());
+        }
+
+        private void pnlBookmark_ControlAdded(object sender, ControlEventArgs e)
+        {
+            e.Control.Location = new Point(0, (pnlBookmark.Controls.Count - 1) * e.Control.Height + 10);
+            pnlBookmark.Height = (pnlBookmark.Controls.Count - 1)*e.Control.Height + 10;
+            lblServers.Location = new Point(lblServers.Location.X,
+                pnlBookmark.Height + pnlBookmark.Location.Y + lblServers.Height);
+            pnlServers.Location = new Point(pnlServers.Location.X, lblServers.Location.Y + 20);
+            Console.WriteLine("Controls " + pnlBookmark.Controls.Count + " Height " + pnlBookmark.Height);
+        }
+
+        private void pnlServers_ControlAdded(object sender, ControlEventArgs e)
+        {
+            e.Control.Location = new Point(0, (pnlServers.Controls.Count - 1) * e.Control.Height + 10);
+            pnlServers.Height = (pnlServers.Controls.Count - 1) * e.Control.Height + 10;
         }
     }
 }
