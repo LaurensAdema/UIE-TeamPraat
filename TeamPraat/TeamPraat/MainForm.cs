@@ -80,46 +80,6 @@ namespace TeamPraat
                     tmr_Slide.Enabled = true;
                 }
             }
-            /*
-            if (scMainScreen.Panel2.Visible)
-            {
-                originalpos = b.Location;
-                b.Location = new Point(Size.Width - b.Width - 10, b.Location.Y);
-                b.Image = Resources.ic_keyboard_arrow_left_white_24dp_2x;
-
-                for (int splitterDistance = initialSplitterDistance;
-                    splitterDistance <= scMainScreen.Width;
-                    splitterDistance += 1)
-                {
-                    DateTime start = DateTime.Now;
-                    scMainScreen.SplitterDistance = splitterDistance;
-
-                    while (DateTime.Now.Subtract(start).TotalMilliseconds <= 0.5)
-                    {
-                        Application.DoEvents();
-                    }
-                }
-                scMainScreen.Panel2.Hide();
-            }
-            else
-            {
-                scMainScreen.Panel2.Show();
-                b.Image = Resources.ic_keyboard_arrow_right_white_24dp_2x;
-                for (int splitterDistance = scMainScreen.Width;
-                    splitterDistance >= initialSplitterDistance;
-                    splitterDistance -= 1)
-                {
-                    DateTime start = DateTime.Now;
-                    scMainScreen.SplitterDistance = splitterDistance;
-                    b.Location.Offset(1, 0);
-
-                    while (DateTime.Now.Subtract(start).TotalMilliseconds <= 0.5)
-                    {
-                        Application.DoEvents();
-                    }
-                }
-                b.Location = originalpos;
-            }*/
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
