@@ -35,12 +35,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.scMainScreen = new System.Windows.Forms.SplitContainer();
-            this.firstScreen1 = new TeamPraat.Ui_Elements.FirstScreen();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.lblFriends = new System.Windows.Forms.Label();
             this.lbFriends = new System.Windows.Forms.ListBox();
             this.pbFriendsSlide = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tmr_Slide = new System.Windows.Forms.Timer(this.components);
+            this.firstScreen1 = new TeamPraat.Ui_Elements.FirstScreen();
             this.plConnected.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbVolume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMic)).BeginInit();
@@ -166,13 +167,6 @@
             this.scMainScreen.SplitterDistance = 950;
             this.scMainScreen.TabIndex = 3;
             // 
-            // firstScreen1
-            // 
-            this.firstScreen1.Location = new System.Drawing.Point(8, 3);
-            this.firstScreen1.Name = "firstScreen1";
-            this.firstScreen1.Size = new System.Drawing.Size(773, 170);
-            this.firstScreen1.TabIndex = 0;
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::TeamPraat.Properties.Resources.ic_person_add_white_24dp_2x;
@@ -283,6 +277,18 @@
             this.pbFriendsSlide.TabStop = false;
             this.pbFriendsSlide.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // tmr_Slide
+            // 
+            this.tmr_Slide.Interval = 1;
+            this.tmr_Slide.Tick += new System.EventHandler(this.tmr_Slide_Tick);
+            // 
+            // firstScreen1
+            // 
+            this.firstScreen1.Location = new System.Drawing.Point(8, 3);
+            this.firstScreen1.Name = "firstScreen1";
+            this.firstScreen1.Size = new System.Drawing.Size(773, 170);
+            this.firstScreen1.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,6 +343,7 @@
         public System.Windows.Forms.PictureBox pictureBox6;
         private System.ComponentModel.IContainer components;
         private Ui_Elements.FirstScreen firstScreen1;
+        private System.Windows.Forms.Timer tmr_Slide;
     }
 }
 
