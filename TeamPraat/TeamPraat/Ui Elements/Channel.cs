@@ -14,7 +14,7 @@ namespace TeamPraat.Ui_Elements{
         private readonly int preHeight;
         private Color border;
 
-        Names name = new Names();
+        private readonly Names name = new Names();
 
         public Channel(){
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace TeamPraat.Ui_Elements{
             BorderColor = Color.Red;
             Allchannels.Add(this);
             preHeight = 60;
-            Random rnd = new Random();
+            var rnd = new Random();
             for (int i = 1; i <= 5; i++){
                 int r = rnd.Next(name.names.Count);
                 channelMemberList.Items.Add(name.names[r]);
@@ -77,7 +77,7 @@ namespace TeamPraat.Ui_Elements{
         }
 
         public void Expand(){
-            Size = new Size(Width, Height + (channelMemberList.Height + 10));
+            Size = new Size(Width, Height + channelMemberList.Height + 10);
 
 
             foreach (var ch in from Control c in Parent.Controls
@@ -85,19 +85,25 @@ namespace TeamPraat.Ui_Elements{
                 into ch
                 where ch?.Location.Y > Location.Y
                 select ch){
-                ch.Location = new Point(ch.Location.X, ch.Location.Y + (channelMemberList.Height + 10));
+                ch.Location = new Point(ch.Location.X, ch.Location.Y + channelMemberList.Height + 10);
                 ch.Refresh();
             }
-            ButtonExp.Location = new Point(ButtonExp.Location.X, ButtonExp.Location.Y + (channelMemberList.Height + 10));
+            ButtonExp.Location = new Point(ButtonExp.Location.X, ButtonExp.Location.Y + channelMemberList.Height + 10);
             ButtonExp.Image = Resources.ic_keyboard_arrow_up_black_24dp_2x;
             Refresh();
         }
 
+        private void RemoveMe(){
+            foreach (Channel ch in Allchannels)
+            {
+                if (ch.channelMemberList.Items.Contains("Me")) ch.channelMemberList.Items.Remove("Me");
+            }
+        }
         private void Channel_Click(object sender, EventArgs e){
             if (SelectedChannel == this){
                 SelectedChannel = null;
                 BorderColor = Color.Red;
-                channelMemberList.Items.Remove("Me");
+                RemoveMe();
             }
             else{
                 foreach (Channel ch in Allchannels){
@@ -105,6 +111,7 @@ namespace TeamPraat.Ui_Elements{
                 }
                 SelectedChannel = this;
                 BorderColor = Color.GreenYellow;
+                RemoveMe();
                 channelMemberList.Items.Add("Me");
             }
         }
