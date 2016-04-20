@@ -17,6 +17,9 @@ namespace TeamPraat
         public ConnectedServer selectedServer = null;
         public int Servers;
         public bool SpeakerMuted;
+        private int slideDirection = 0;
+        private PictureBox friendsBox;
+        private int splitterDistance;
 
         public MainForm()
         {
@@ -51,10 +54,33 @@ namespace TeamPraat
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e) // Friends slider
         {
-            var b = (PictureBox) sender;
+            friendsBox = (PictureBox) sender;
 
+            if (!tmr_Slide.Enabled)
+            {
+                if (scMainScreen.Panel2.Visible)
+                {
+                    originalpos = friendsBox.Location;
+                    friendsBox.Location = new Point(Size.Width - friendsBox.Width - 10, friendsBox.Location.Y);
+                    friendsBox.Image = Resources.ic_keyboard_arrow_left_white_24dp_2x;
+
+                    slideDirection = 4;
+                    splitterDistance = initialSplitterDistance;
+                    tmr_Slide.Enabled = true;
+                }
+                else
+                {
+                    scMainScreen.Panel2.Show();
+                    friendsBox.Image = Resources.ic_keyboard_arrow_right_white_24dp_2x;
+
+                    slideDirection = -4;
+                    splitterDistance = scMainScreen.Width;
+                    tmr_Slide.Enabled = true;
+                }
+            }
+            /*
             if (scMainScreen.Panel2.Visible)
             {
                 originalpos = b.Location;
@@ -93,7 +119,7 @@ namespace TeamPraat
                     }
                 }
                 b.Location = originalpos;
-            }
+            }*/
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -117,6 +143,39 @@ namespace TeamPraat
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Vriend toegevoegd");
+        }
+
+        private void tmr_Slide_Tick(object sender, EventArgs e)
+        {
+            if (slideDirection > 0) //inklappen
+            {
+                if (splitterDistance <= scMainScreen.Width)
+                {
+                    splitterDistance += slideDirection;
+                    scMainScreen.SplitterDistance = splitterDistance;
+                }
+                else
+                {
+                    slideDirection = 0;
+                    scMainScreen.Panel2.Hide();
+                    tmr_Slide.Enabled = false;
+                }
+            }
+            else if (slideDirection < 0) // uitklappen
+            {
+                if (splitterDistance >= initialSplitterDistance)
+                {
+                    splitterDistance = splitterDistance + slideDirection;
+                    scMainScreen.SplitterDistance = splitterDistance;
+                    friendsBox.Location.Offset(1, 0);
+                }
+                else
+                {
+                    slideDirection = 0;
+                    friendsBox.Location = originalpos;
+                    tmr_Slide.Enabled = false;
+                }
+            }
         }
     }
 }
