@@ -40,9 +40,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(16, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(753, 25);
+            this.label3.Size = new System.Drawing.Size(729, 25);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Press on the big button in the the top left cornenr to go to the server brouwser";
+            this.label3.Text = "Press on the big button in the the top left corner to go to the server browser";
             // 
             // label2
             // 
@@ -64,7 +64,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(424, 25);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Welkom to the new Teamspeak experionce";
+            this.label1.Text = "Welkom to the new Teamspeak experience";
             // 
             // FirstScreen
             // 
