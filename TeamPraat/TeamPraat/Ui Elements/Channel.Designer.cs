@@ -56,10 +56,13 @@
             // 
             // channelMemberList
             // 
+            this.channelMemberList.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.channelMemberList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.channelMemberList.ForeColor = System.Drawing.Color.White;
             this.channelMemberList.FormattingEnabled = true;
-            this.channelMemberList.Location = new System.Drawing.Point(19, 53);
+            this.channelMemberList.Location = new System.Drawing.Point(19, 62);
             this.channelMemberList.Name = "channelMemberList";
-            this.channelMemberList.Size = new System.Drawing.Size(616, 264);
+            this.channelMemberList.Size = new System.Drawing.Size(574, 130);
             this.channelMemberList.TabIndex = 2;
             // 
             // Channel
@@ -72,7 +75,7 @@
             this.Controls.Add(this.ButtonExp);
             this.Controls.Add(this.lbl_ChannelName);
             this.Name = "Channel";
-            this.Size = new System.Drawing.Size(648, 474);
+            this.Size = new System.Drawing.Size(648, 195);
             this.Load += new System.EventHandler(this.Channel_Load);
             this.Click += new System.EventHandler(this.Channel_Click);
             ((System.ComponentModel.ISupportInitialize)(this.ButtonExp)).EndInit();

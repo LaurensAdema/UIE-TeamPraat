@@ -14,7 +14,8 @@ namespace TeamPraat.Ui_Elements{
         private readonly int preHeight;
         private Color border;
 
-        Names name= new Names();
+        Names name = new Names();
+
         public Channel(){
             InitializeComponent();
             lbl_ChannelName.Text = "Channel " + Location.Y;
@@ -67,16 +68,16 @@ namespace TeamPraat.Ui_Elements{
                 into ch
                 where ch?.Location.Y > Location.Y
                 select ch){
-                ch.Location = new Point(ch.Location.X, ch.Location.Y - colapseSize);
+                ch.Location = new Point(ch.Location.X, ch.Location.Y - (channelMemberList.Height + 10));
                 ch.Refresh();
             }
-            ButtonExp.Location = new Point(ButtonExp.Location.X, ButtonExp.Location.Y - colapseSize);
+            ButtonExp.Location = new Point(ButtonExp.Location.X, ButtonExp.Location.Y - (channelMemberList.Height + 10));
             ButtonExp.Image = Resources.ic_keyboard_arrow_down_black_24dp_2x1;
             Refresh();
         }
 
         public void Expand(){
-            Size = new Size(Width, Height + colapseSize);
+            Size = new Size(Width, Height + (channelMemberList.Height + 10));
 
 
             foreach (var ch in from Control c in Parent.Controls
@@ -84,15 +85,28 @@ namespace TeamPraat.Ui_Elements{
                 into ch
                 where ch?.Location.Y > Location.Y
                 select ch){
-                ch.Location = new Point(ch.Location.X, ch.Location.Y + colapseSize);
+                ch.Location = new Point(ch.Location.X, ch.Location.Y + (channelMemberList.Height + 10));
                 ch.Refresh();
             }
-            ButtonExp.Location = new Point(ButtonExp.Location.X, ButtonExp.Location.Y + colapseSize);
+            ButtonExp.Location = new Point(ButtonExp.Location.X, ButtonExp.Location.Y + (channelMemberList.Height + 10));
             ButtonExp.Image = Resources.ic_keyboard_arrow_up_black_24dp_2x;
             Refresh();
         }
 
-        private void Channel_Click(object sender, EventArgs e){ 
+        private void Channel_Click(object sender, EventArgs e){
+            if (SelectedChannel == this){
+                SelectedChannel = null;
+                BorderColor = Color.Red;
+                channelMemberList.Items.Remove("Me");
+            }
+            else{
+                foreach (Channel ch in Allchannels){
+                    ch.BorderColor = Color.Red;
+                }
+                SelectedChannel = this;
+                BorderColor = Color.GreenYellow;
+                channelMemberList.Items.Add("Me");
+            }
         }
     }
 }
