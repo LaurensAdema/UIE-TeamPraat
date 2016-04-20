@@ -35,7 +35,7 @@ namespace TeamPraat.Ui_Elements
         private void pnlBookmark_ControlAdded(object sender, ControlEventArgs e)
         {
             e.Control.Location = new Point(0, (pnlBookmark.Controls.Count - 1) * e.Control.Height + 20);
-            pnlBookmark.Height = (pnlBookmark.Controls.Count - 1)*e.Control.Height + 20;
+            pnlBookmark.Height = (pnlBookmark.Controls.Count)*e.Control.Height + 20;
             lblServers.Location = new Point(lblServers.Location.X,
                 pnlBookmark.Height + pnlBookmark.Location.Y + lblServers.Height);
             pnlServers.Location = new Point(pnlServers.Location.X, lblServers.Location.Y + 20);
