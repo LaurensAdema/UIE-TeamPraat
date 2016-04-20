@@ -93,7 +93,7 @@
             this.Controls.Add(this.channel1);
             this.Controls.Add(this.lbl_Channels);
             this.Name = "ConnectedServerChannels";
-            this.Size = new System.Drawing.Size(677, 333);
+            this.Size = new System.Drawing.Size(677, 637);
             this.ResumeLayout(false);
             this.PerformLayout();
 
